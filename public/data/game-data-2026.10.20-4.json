@@ -1,0 +1,5605 @@
+{
+  "schema": 1,
+  "version": "2026.10.20-4",
+  "monsters": [
+    {
+      "id": "giant_rat",
+      "name": "Giant Rat",
+      "family": "Rodent",
+      "level": 1,
+      "hitDice": "2d4",
+      "armourClass": 6,
+      "experience": 1,
+      "bravery": 30,
+      "awareness": 8,
+      "sleepiness": 30,
+      "attacks": [
+        { "method": "Bite", "damage": "1d3" }
+      ],
+      "flags": "Animal",
+      "groupMin": 2,
+      "groupMax": 4
+    },
+    {
+      "id": "giant_bat",
+      "name": "Giant Bat",
+      "family": "Bat",
+      "level": 1,
+      "hitDice": "2d6",
+      "armourClass": 8,
+      "speed": 20,
+      "experience": 2,
+      "bravery": 20,
+      "awareness": 12,
+      "attacks": [
+        { "method": "Bite", "damage": "1d3" }
+      ],
+      "flags": "Animal, Erratic, Flying",
+      "groupMax": 3
+    },
+    {
+      "id": "jackal",
+      "name": "Jackal",
+      "family": "Canine",
+      "level": 1,
+      "hitDice": "2d6",
+      "armourClass": 7,
+      "speed": 14,
+      "experience": 1,
+      "bravery": 70,
+      "awareness": 12,
+      "sleepiness": 10,
+      "attacks": [
+        { "method": "Bite", "damage": "1d3" }
+      ],
+      "flags": "Animal",
+      "groupMin": 3,
+      "groupMax": 4
+    },
+    {
+      "id": "kobold",
+      "name": "Kobold",
+      "family": "Kobold",
+      "level": 1,
+      "hitDice": "3d6",
+      "armourClass": 12,
+      "experience": 3,
+      "bravery": 50,
+      "sleepiness": 40,
+      "attacks": [
+        { "method": "Hit", "damage": "1d6" }
+      ],
+      "flags": "Evil",
+      "groupMin": 2,
+      "groupMax": 5,
+      "dropChance": 30,
+      "maxDrops": 1,
+      "carriesGold": true
+    },
+    {
+      "id": "floating_eye",
+      "name": "Floating Eye",
+      "family": "FloatingEye",
+      "level": 1,
+      "hitDice": "5d8",
+      "armourClass": 6,
+      "experience": 3,
+      "awareness": 2,
+      "sleepiness": 10,
+      "attacks": [
+        { "method": "Gaze", "effect": "Paralyze", "damage": "1d4" }
+      ],
+      "flags": "NeverMoves, HurtByLight"
+    },
+    {
+      "id": "white_jelly",
+      "name": "White Jelly",
+      "family": "Jelly",
+      "level": 2,
+      "hitDice": "8d8",
+      "armourClass": 1,
+      "experience": 10,
+      "awareness": 2,
+      "attacks": [
+        { "method": "Touch", "effect": "Poison", "damage": "1d6" }
+      ],
+      "flags": "NeverMoves, ColdBlooded, Mindless, ImmunePoison"
+    },
+    {
+      "id": "giant_centipede",
+      "name": "Giant Centipede",
+      "family": "Centipede",
+      "level": 2,
+      "hitDice": "3d6",
+      "armourClass": 10,
+      "experience": 4,
+      "bravery": 40,
+      "awareness": 8,
+      "sleepiness": 30,
+      "attacks": [
+        { "method": "Bite", "damage": "1d3" },
+        { "method": "Sting", "effect": "Poison", "damage": "1d3" }
+      ],
+      "flags": "Animal"
+    },
+    {
+      "id": "goblin",
+      "name": "Goblin",
+      "family": "Goblinoid",
+      "level": 2,
+      "hitDice": "3d8",
+      "armourClass": 14,
+      "experience": 5,
+      "bravery": 60,
+      "awareness": 12,
+      "sleepiness": 30,
+      "attacks": [
+        { "method": "Hit", "damage": "1d6" }
+      ],
+      "flags": "Evil",
+      "groupMin": 3,
+      "groupMax": 6,
+      "dropChance": 40,
+      "maxDrops": 1,
+      "carriesGold": true
+    },
+    {
+      "id": "cutpurse",
+      "name": "Cutpurse",
+      "family": "Person",
+      "level": 2,
+      "hitDice": "3d8",
+      "armourClass": 10,
+      "speed": 11,
+      "experience": 6,
+      "bravery": 30,
+      "awareness": 14,
+      "sleepiness": 10,
+      "attacks": [
+        { "method": "Touch", "effect": "StealGold", "damage": "0" }
+      ],
+      "dropChance": 20,
+      "maxDrops": 1,
+      "carriesGold": true
+    },
+    {
+      "id": "giant_ant",
+      "name": "Giant Ant",
+      "level": 3,
+      "hitDice": "4d6",
+      "armourClass": 18,
+      "experience": 6,
+      "bravery": 50,
+      "sleepiness": 20,
+      "attacks": [
+        { "method": "Bite", "damage": "1d6" }
+      ],
+      "flags": "Animal",
+      "groupMin": 2,
+      "groupMax": 4
+    },
+    {
+      "id": "wildcat",
+      "name": "Wildcat",
+      "family": "Feline",
+      "level": 3,
+      "hitDice": "3d8",
+      "armourClass": 12,
+      "speed": 14,
+      "experience": 7,
+      "bravery": 50,
+      "awareness": 14,
+      "sleepiness": 20,
+      "attacks": [
+        { "method": "Claw", "damage": "1d3" },
+        { "method": "Claw", "damage": "1d3" }
+      ],
+      "flags": "Animal"
+    },
+    {
+      "id": "skeleton",
+      "name": "Skeleton",
+      "family": "Skeleton",
+      "level": 3,
+      "hitDice": "4d8",
+      "armourClass": 16,
+      "experience": 8,
+      "bravery": 100,
+      "attacks": [
+        { "method": "Hit", "damage": "1d6" }
+      ],
+      "flags": "Evil, Undead, ColdBlooded, Mindless, ImmunePoison",
+      "groupMax": 3
+    },
+    {
+      "id": "zombie",
+      "name": "Zombie",
+      "family": "Zombie",
+      "level": 3,
+      "hitDice": "6d8",
+      "armourClass": 10,
+      "speed": 5,
+      "experience": 9,
+      "bravery": 100,
+      "awareness": 8,
+      "attacks": [
+        { "method": "Hit", "damage": "1d8" }
+      ],
+      "flags": "Evil, Undead, ColdBlooded, Mindless, ImmunePoison",
+      "groupMax": 3
+    },
+    {
+      "id": "yellow_mold",
+      "name": "Yellow Mold",
+      "family": "Mold",
+      "level": 3,
+      "hitDice": "6d8",
+      "armourClass": 10,
+      "experience": 8,
+      "awareness": 2,
+      "attacks": [
+        { "method": "Touch", "effect": "Poison", "damage": "1d6" }
+      ],
+      "flags": "NeverMoves, ColdBlooded, Mindless, ImmunePoison"
+    },
+    {
+      "id": "apprentice",
+      "name": "Apprentice Wizard",
+      "family": "Person",
+      "level": 3,
+      "hitDice": "4d8",
+      "armourClass": 10,
+      "experience": 10,
+      "bravery": 40,
+      "awareness": 14,
+      "sleepiness": 30,
+      "attacks": [
+        { "method": "Hit", "damage": "1d4" }
+      ],
+      "spells": "Blink, MagicMissile",
+      "spellOneIn": 4,
+      "dropChance": 60,
+      "maxDrops": 1,
+      "carriesGold": true
+    },
+    {
+      "id": "wolf",
+      "name": "Wolf",
+      "family": "Canine",
+      "level": 4,
+      "hitDice": "4d8",
+      "armourClass": 14,
+      "speed": 15,
+      "experience": 10,
+      "bravery": 80,
+      "awareness": 16,
+      "sleepiness": 10,
+      "attacks": [
+        { "method": "Bite", "damage": "1d6" }
+      ],
+      "flags": "Animal",
+      "groupMin": 3,
+      "groupMax": 6
+    },
+    {
+      "id": "hobgoblin",
+      "name": "Hobgoblin",
+      "family": "Goblinoid",
+      "level": 4,
+      "hitDice": "5d8",
+      "armourClass": 20,
+      "experience": 12,
+      "bravery": 70,
+      "awareness": 12,
+      "sleepiness": 30,
+      "attacks": [
+        { "method": "Hit", "damage": "1d8" }
+      ],
+      "flags": "Evil",
+      "groupMin": 2,
+      "groupMax": 5,
+      "dropChance": 40,
+      "maxDrops": 1,
+      "carriesGold": true
+    },
+    {
+      "id": "giant_wolf_spider",
+      "name": "Giant Wolf Spider",
+      "family": "Spider",
+      "level": 4,
+      "hitDice": "4d8",
+      "armourClass": 14,
+      "speed": 14,
+      "experience": 12,
+      "bravery": 60,
+      "awareness": 12,
+      "sleepiness": 20,
+      "attacks": [
+        { "method": "Bite", "effect": "Poison", "damage": "1d6" }
+      ],
+      "flags": "Animal"
+    },
+    {
+      "id": "orc",
+      "name": "Orc",
+      "family": "Orc",
+      "level": 5,
+      "hitDice": "6d8",
+      "armourClass": 20,
+      "experience": 15,
+      "bravery": 80,
+      "awareness": 12,
+      "sleepiness": 30,
+      "attacks": [
+        { "method": "Hit", "damage": "1d8" }
+      ],
+      "flags": "Evil",
+      "groupMin": 3,
+      "groupMax": 8,
+      "dropChance": 40,
+      "maxDrops": 1,
+      "carriesGold": true
+    },
+    {
+      "id": "gnoll",
+      "name": "Gnoll",
+      "family": "Beastfolk",
+      "level": 5,
+      "hitDice": "5d10",
+      "armourClass": 16,
+      "experience": 15,
+      "bravery": 80,
+      "awareness": 14,
+      "sleepiness": 20,
+      "attacks": [
+        { "method": "Bite", "damage": "1d4" },
+        { "method": "Hit", "damage": "1d8" }
+      ],
+      "flags": "Evil",
+      "groupMin": 2,
+      "groupMax": 5,
+      "dropChance": 30,
+      "maxDrops": 1,
+      "carriesGold": true
+    },
+    {
+      "id": "dark_acolyte",
+      "name": "Dark Acolyte",
+      "family": "Person",
+      "level": 6,
+      "hitDice": "6d8",
+      "armourClass": 16,
+      "experience": 20,
+      "bravery": 50,
+      "awareness": 14,
+      "sleepiness": 30,
+      "attacks": [
+        { "method": "Hit", "damage": "1d6" }
+      ],
+      "flags": "Evil",
+      "spells": "CauseWounds, Scare",
+      "spellOneIn": 3,
+      "dropChance": 60,
+      "maxDrops": 1,
+      "carriesGold": true
+    },
+    {
+      "id": "rust_monster",
+      "name": "Rust Monster",
+      "family": "Quadruped",
+      "level": 6,
+      "hitDice": "5d8",
+      "armourClass": 20,
+      "experience": 22,
+      "bravery": 60,
+      "sleepiness": 30,
+      "attacks": [
+        { "method": "Touch", "effect": "Corrode", "damage": "0" },
+        { "method": "Bite", "damage": "1d8" }
+      ],
+      "flags": "Animal"
+    },
+    {
+      "id": "lizardfolk",
+      "name": "Lizardfolk",
+      "family": "Beastfolk",
+      "level": 6,
+      "hitDice": "6d8",
+      "armourClass": 18,
+      "experience": 18,
+      "bravery": 70,
+      "awareness": 12,
+      "sleepiness": 30,
+      "attacks": [
+        { "method": "Hit", "damage": "1d6" },
+        { "method": "Bite", "damage": "1d6" }
+      ],
+      "flags": "ColdBlooded",
+      "groupMin": 2,
+      "groupMax": 4,
+      "dropChance": 20,
+      "maxDrops": 1
+    },
+    {
+      "id": "harpy",
+      "name": "Harpy",
+      "family": "Hybrid",
+      "level": 6,
+      "hitDice": "6d8",
+      "armourClass": 14,
+      "speed": 14,
+      "experience": 20,
+      "bravery": 60,
+      "awareness": 16,
+      "sleepiness": 20,
+      "attacks": [
+        { "method": "Claw", "damage": "1d4" },
+        { "method": "Claw", "damage": "1d4" }
+      ],
+      "flags": "Evil, Erratic, Flying",
+      "groupMax": 3
+    },
+    {
+      "id": "ghoul",
+      "name": "Ghoul",
+      "family": "Zombie",
+      "level": 7,
+      "hitDice": "7d8",
+      "armourClass": 16,
+      "experience": 28,
+      "bravery": 90,
+      "awareness": 14,
+      "sleepiness": 20,
+      "attacks": [
+        { "method": "Claw", "effect": "Paralyze", "damage": "1d4" },
+        { "method": "Bite", "damage": "1d6" }
+      ],
+      "flags": "Evil, Undead, ColdBlooded, ImmunePoison",
+      "groupMax": 3
+    },
+    {
+      "id": "bugbear",
+      "name": "Bugbear",
+      "family": "Goblinoid",
+      "level": 7,
+      "hitDice": "8d8",
+      "armourClass": 20,
+      "experience": 30,
+      "bravery": 80,
+      "awareness": 12,
+      "sleepiness": 30,
+      "attacks": [
+        { "method": "Hit", "damage": "2d6" }
+      ],
+      "flags": "Evil",
+      "dropChance": 50,
+      "maxDrops": 1,
+      "carriesGold": true
+    },
+    {
+      "id": "imp",
+      "name": "Imp",
+      "family": "MinorDemon",
+      "level": 8,
+      "hitDice": "6d8",
+      "armourClass": 20,
+      "speed": 12,
+      "experience": 35,
+      "bravery": 50,
+      "awareness": 16,
+      "sleepiness": 20,
+      "attacks": [
+        { "method": "Sting", "effect": "Poison", "damage": "1d6" }
+      ],
+      "flags": "Evil, Demon, Invisible, Flying, ImmuneFire",
+      "spells": "Blink, FireBolt",
+      "spellOneIn": 4
+    },
+    {
+      "id": "panther",
+      "name": "Panther",
+      "family": "Feline",
+      "level": 8,
+      "hitDice": "8d8",
+      "armourClass": 18,
+      "speed": 16,
+      "experience": 30,
+      "bravery": 70,
+      "awareness": 16,
+      "sleepiness": 20,
+      "attacks": [
+        { "method": "Claw", "damage": "1d4" },
+        { "method": "Claw", "damage": "1d4" },
+        { "method": "Bite", "damage": "1d8" }
+      ],
+      "flags": "Animal"
+    },
+    {
+      "id": "dire_wolf",
+      "name": "Dire Wolf",
+      "family": "Canine",
+      "level": 9,
+      "hitDice": "7d8",
+      "armourClass": 20,
+      "speed": 15,
+      "experience": 40,
+      "bravery": 90,
+      "awareness": 18,
+      "sleepiness": 10,
+      "attacks": [
+        { "method": "Bite", "damage": "1d8" }
+      ],
+      "flags": "Animal",
+      "groupMin": 2,
+      "groupMax": 3
+    },
+    {
+      "id": "owlbear",
+      "name": "Owlbear",
+      "family": "Quadruped",
+      "level": 9,
+      "hitDice": "12d8",
+      "armourClass": 22,
+      "experience": 50,
+      "bravery": 90,
+      "awareness": 12,
+      "sleepiness": 30,
+      "attacks": [
+        { "method": "Claw", "damage": "1d6" },
+        { "method": "Claw", "damage": "1d6" },
+        { "method": "Bite", "damage": "1d8" }
+      ],
+      "flags": "Animal"
+    },
+    {
+      "id": "shadow",
+      "name": "Shadow",
+      "family": "Ghost",
+      "level": 9,
+      "hitDice": "6d8",
+      "armourClass": 20,
+      "experience": 45,
+      "bravery": 80,
+      "awareness": 14,
+      "sleepiness": 10,
+      "attacks": [
+        { "method": "Touch", "effect": "DrainStr", "damage": "1d6" }
+      ],
+      "flags": "Evil, Undead, Invisible, ColdBlooded, PassesWalls, HurtByLight, ImmuneCold, ImmunePoison"
+    },
+    {
+      "id": "gelatinous_cube",
+      "name": "Gelatinous Cube",
+      "family": "Jelly",
+      "level": 10,
+      "rarity": 2,
+      "hitDice": "20d8",
+      "armourClass": 6,
+      "speed": 5,
+      "experience": 80,
+      "bravery": 100,
+      "awareness": 6,
+      "attacks": [
+        { "method": "Engulf", "effect": "Acid", "damage": "3d6" }
+      ],
+      "flags": "ColdBlooded, Mindless, ImmuneAcid",
+      "dropChance": 100,
+      "maxDrops": 4,
+      "carriesGold": true
+    },
+    {
+      "id": "quasit",
+      "name": "Quasit",
+      "family": "MinorDemon",
+      "level": 10,
+      "hitDice": "7d8",
+      "armourClass": 22,
+      "speed": 13,
+      "experience": 50,
+      "bravery": 50,
+      "awareness": 16,
+      "sleepiness": 20,
+      "attacks": [
+        { "method": "Claw", "effect": "Poison", "damage": "1d4" },
+        { "method": "Claw", "effect": "Poison", "damage": "1d4" }
+      ],
+      "flags": "Evil, Demon, Invisible, ImmuneFire",
+      "spells": "Blink, Scare",
+      "spellOneIn": 4
+    },
+    {
+      "id": "ogre",
+      "name": "Ogre",
+      "family": "Ogre",
+      "level": 10,
+      "hitDice": "13d10",
+      "armourClass": 22,
+      "experience": 70,
+      "bravery": 90,
+      "awareness": 12,
+      "sleepiness": 30,
+      "attacks": [
+        { "method": "Hit", "damage": "2d8" }
+      ],
+      "flags": "Evil, Giant",
+      "groupMax": 2,
+      "dropChance": 50,
+      "maxDrops": 1,
+      "carriesGold": true
+    },
+    {
+      "id": "giant_spider",
+      "name": "Giant Spider",
+      "family": "Spider",
+      "level": 11,
+      "hitDice": "10d10",
+      "armourClass": 24,
+      "speed": 12,
+      "experience": 70,
+      "bravery": 80,
+      "awareness": 14,
+      "sleepiness": 30,
+      "attacks": [
+        { "method": "Bite", "effect": "Poison", "damage": "2d6" }
+      ],
+      "flags": "Animal",
+      "groupMax": 3
+    },
+    {
+      "id": "basilisk",
+      "name": "Basilisk",
+      "family": "Reptile",
+      "level": 12,
+      "rarity": 2,
+      "hitDice": "14d8",
+      "armourClass": 30,
+      "experience": 90,
+      "bravery": 60,
+      "awareness": 12,
+      "sleepiness": 40,
+      "attacks": [
+        { "method": "Gaze", "effect": "Paralyze", "damage": "0" },
+        { "method": "Bite", "damage": "2d8" }
+      ],
+      "flags": "Animal, ColdBlooded"
+    },
+    {
+      "id": "werewolf",
+      "name": "Werewolf",
+      "family": "Canine",
+      "level": 12,
+      "hitDice": "14d8",
+      "armourClass": 24,
+      "speed": 15,
+      "experience": 100,
+      "bravery": 90,
+      "awareness": 18,
+      "sleepiness": 20,
+      "attacks": [
+        { "method": "Bite", "damage": "2d6" },
+        { "method": "Claw", "damage": "1d8" },
+        { "method": "Claw", "damage": "1d8" }
+      ],
+      "flags": "Evil, Regenerates"
+    },
+    {
+      "id": "wight",
+      "name": "Wight",
+      "family": "Wight",
+      "level": 12,
+      "hitDice": "12d8",
+      "armourClass": 26,
+      "experience": 110,
+      "bravery": 90,
+      "awareness": 14,
+      "sleepiness": 20,
+      "attacks": [
+        { "method": "Hit", "damage": "1d8" },
+        { "method": "Touch", "effect": "DrainXp", "damage": "1d6" }
+      ],
+      "flags": "Evil, Undead, ColdBlooded, HurtByLight, ImmuneCold, ImmunePoison",
+      "spells": "Scare",
+      "spellOneIn": 8,
+      "dropChance": 50,
+      "maxDrops": 1,
+      "carriesGold": true
+    },
+    {
+      "id": "young_white_dragon",
+      "name": "Young White Dragon",
+      "family": "YoungDragon",
+      "level": 13,
+      "rarity": 2,
+      "hitDice": "15d10",
+      "armourClass": 36,
+      "experience": 150,
+      "bravery": 80,
+      "awareness": 16,
+      "sleepiness": 70,
+      "attacks": [
+        { "method": "Claw", "damage": "1d8" },
+        { "method": "Claw", "damage": "1d8" },
+        { "method": "Bite", "damage": "2d8" }
+      ],
+      "flags": "Evil, Dragon, ImmuneCold",
+      "spells": "BreathCold",
+      "spellOneIn": 8,
+      "dropChance": 90,
+      "maxDrops": 3,
+      "carriesGold": true,
+      "size": 2
+    },
+    {
+      "id": "troll",
+      "name": "Troll",
+      "family": "Troll",
+      "level": 14,
+      "hitDice": "16d10",
+      "armourClass": 28,
+      "experience": 180,
+      "bravery": 90,
+      "awareness": 14,
+      "sleepiness": 30,
+      "attacks": [
+        { "method": "Claw", "damage": "1d8" },
+        { "method": "Claw", "damage": "1d8" },
+        { "method": "Bite", "damage": "2d6" }
+      ],
+      "flags": "Evil, Giant, Regenerates",
+      "groupMax": 2,
+      "dropChance": 50,
+      "maxDrops": 1,
+      "carriesGold": true
+    },
+    {
+      "id": "manticore",
+      "name": "Manticore",
+      "family": "Hybrid",
+      "level": 15,
+      "hitDice": "14d10",
+      "armourClass": 26,
+      "speed": 11,
+      "experience": 190,
+      "bravery": 80,
+      "awareness": 16,
+      "sleepiness": 30,
+      "attacks": [
+        { "method": "Claw", "damage": "1d8" },
+        { "method": "Claw", "damage": "1d8" },
+        { "method": "Bite", "damage": "1d10" }
+      ],
+      "flags": "Evil, Flying",
+      "spells": "Spikes",
+      "spellOneIn": 4,
+      "size": 2
+    },
+    {
+      "id": "young_green_dragon",
+      "name": "Young Green Dragon",
+      "family": "YoungDragon",
+      "level": 16,
+      "rarity": 2,
+      "hitDice": "17d10",
+      "armourClass": 38,
+      "experience": 220,
+      "bravery": 80,
+      "awareness": 16,
+      "sleepiness": 70,
+      "attacks": [
+        { "method": "Claw", "damage": "1d8" },
+        { "method": "Claw", "damage": "1d8" },
+        { "method": "Bite", "damage": "2d10" }
+      ],
+      "flags": "Evil, Dragon, ImmunePoison",
+      "spells": "BreathPoison",
+      "spellOneIn": 8,
+      "dropChance": 90,
+      "maxDrops": 3,
+      "carriesGold": true,
+      "size": 2
+    },
+    {
+      "id": "hell_hound",
+      "name": "Hell Hound",
+      "family": "Canine",
+      "level": 16,
+      "rarity": 2,
+      "hitDice": "12d10",
+      "armourClass": 30,
+      "speed": 15,
+      "experience": 200,
+      "bravery": 100,
+      "awareness": 20,
+      "sleepiness": 10,
+      "attacks": [
+        { "method": "Bite", "damage": "2d8" },
+        { "method": "Bite", "effect": "Fire", "damage": "1d8" }
+      ],
+      "flags": "Evil, ImmuneFire",
+      "spells": "BreathFire",
+      "spellOneIn": 6,
+      "groupMax": 3
+    },
+    {
+      "id": "black_pudding",
+      "name": "Black Pudding",
+      "family": "Jelly",
+      "level": 16,
+      "hitDice": "25d10",
+      "armourClass": 10,
+      "speed": 7,
+      "experience": 160,
+      "bravery": 100,
+      "awareness": 6,
+      "attacks": [
+        { "method": "Touch", "effect": "Acid", "damage": "4d8" },
+        { "method": "Touch", "effect": "Corrode", "damage": "0" }
+      ],
+      "flags": "ColdBlooded, Mindless, ImmuneCold, ImmunePoison, ImmuneAcid"
+    },
+    {
+      "id": "hill_giant",
+      "name": "Hill Giant",
+      "family": "Giant",
+      "level": 17,
+      "hitDice": "20d10",
+      "armourClass": 32,
+      "experience": 250,
+      "bravery": 90,
+      "awareness": 12,
+      "sleepiness": 40,
+      "attacks": [
+        { "method": "Hit", "damage": "3d8" },
+        { "method": "Hit", "damage": "3d8" }
+      ],
+      "flags": "Evil, Giant",
+      "groupMax": 2,
+      "dropChance": 60,
+      "maxDrops": 2,
+      "carriesGold": true,
+      "size": 2
+    },
+    {
+      "id": "wyvern",
+      "name": "Wyvern",
+      "family": "YoungDragon",
+      "level": 18,
+      "hitDice": "18d10",
+      "armourClass": 32,
+      "speed": 15,
+      "experience": 300,
+      "bravery": 90,
+      "awareness": 18,
+      "sleepiness": 30,
+      "attacks": [
+        { "method": "Bite", "damage": "2d8" },
+        { "method": "Sting", "effect": "Poison", "damage": "3d6" }
+      ],
+      "flags": "Dragon, Flying",
+      "size": 2
+    },
+    {
+      "id": "wraith",
+      "name": "Wraith",
+      "family": "Wight",
+      "level": 18,
+      "rarity": 2,
+      "hitDice": "15d10",
+      "armourClass": 34,
+      "speed": 12,
+      "experience": 350,
+      "bravery": 90,
+      "awareness": 16,
+      "sleepiness": 10,
+      "attacks": [
+        { "method": "Touch", "effect": "DrainXp", "damage": "2d8" },
+        { "method": "Touch", "effect": "Cold", "damage": "1d8" }
+      ],
+      "flags": "Evil, Undead, Invisible, ColdBlooded, PassesWalls, HurtByLight, ImmuneCold, ImmunePoison",
+      "spells": "Scare, Darkness",
+      "spellOneIn": 6,
+      "dropChance": 50,
+      "maxDrops": 2,
+      "carriesGold": true
+    },
+    {
+      "id": "chimera",
+      "name": "Chimera",
+      "family": "Hybrid",
+      "level": 20,
+      "rarity": 2,
+      "hitDice": "20d10",
+      "armourClass": 34,
+      "speed": 11,
+      "experience": 400,
+      "bravery": 90,
+      "awareness": 16,
+      "sleepiness": 30,
+      "attacks": [
+        { "method": "Bite", "damage": "2d6" },
+        { "method": "Butt", "damage": "1d12" },
+        { "method": "Claw", "damage": "2d6" }
+      ],
+      "flags": "Evil, Flying",
+      "spells": "BreathFire",
+      "spellOneIn": 6,
+      "size": 2
+    },
+    {
+      "id": "fire_elemental",
+      "name": "Fire Elemental",
+      "family": "Elemental",
+      "level": 20,
+      "rarity": 2,
+      "hitDice": "20d10",
+      "armourClass": 30,
+      "speed": 13,
+      "experience": 380,
+      "bravery": 100,
+      "awareness": 12,
+      "attacks": [
+        { "method": "Touch", "effect": "Fire", "damage": "3d8" },
+        { "method": "Touch", "effect": "Fire", "damage": "3d8" }
+      ],
+      "flags": "Mindless, ImmuneFire, ImmunePoison"
+    },
+    {
+      "id": "air_elemental",
+      "name": "Air Elemental",
+      "family": "Elemental",
+      "level": 20,
+      "rarity": 2,
+      "hitDice": "18d10",
+      "armourClass": 30,
+      "speed": 20,
+      "experience": 380,
+      "bravery": 100,
+      "awareness": 12,
+      "attacks": [
+        { "method": "Hit", "damage": "2d8" },
+        { "method": "Hit", "damage": "2d8" }
+      ],
+      "flags": "Erratic, Flying, ColdBlooded, Mindless, ImmunePoison"
+    },
+    {
+      "id": "clay_golem",
+      "name": "Clay Golem",
+      "family": "Golem",
+      "level": 8,
+      "rarity": 2,
+      "hitDice": "10d10",
+      "armourClass": 22,
+      "speed": 8,
+      "experience": 80,
+      "bravery": 100,
+      "awareness": 8,
+      "attacks": [
+        { "method": "Hit", "damage": "2d6" }
+      ],
+      "flags": "ColdBlooded, Mindless, ImmunePoison"
+    },
+    {
+      "id": "flesh_golem",
+      "name": "Flesh Golem",
+      "family": "Golem",
+      "level": 14,
+      "rarity": 2,
+      "hitDice": "15d10",
+      "armourClass": 30,
+      "speed": 9,
+      "experience": 200,
+      "bravery": 100,
+      "awareness": 8,
+      "attacks": [
+        { "method": "Hit", "damage": "2d8" },
+        { "method": "Hit", "damage": "2d8" }
+      ],
+      "flags": "Mindless, ImmunePoison, ImmuneLightning"
+    },
+    {
+      "id": "iron_golem",
+      "name": "Iron Golem",
+      "family": "Golem",
+      "level": 32,
+      "rarity": 3,
+      "hitDice": "35d10",
+      "armourClass": 70,
+      "speed": 7,
+      "experience": 1200,
+      "bravery": 100,
+      "attacks": [
+        { "method": "Hit", "damage": "4d8" },
+        { "method": "Hit", "damage": "4d8" }
+      ],
+      "flags": "ColdBlooded, Mindless, ImmuneFire, ImmuneCold, ImmunePoison, ImmuneLightning",
+      "size": 2
+    },
+    {
+      "id": "stone_golem",
+      "name": "Stone Golem",
+      "family": "Golem",
+      "level": 22,
+      "rarity": 2,
+      "hitDice": "25d10",
+      "armourClass": 50,
+      "speed": 7,
+      "experience": 450,
+      "bravery": 100,
+      "attacks": [
+        { "method": "Hit", "damage": "3d8" },
+        { "method": "Hit", "damage": "3d8" }
+      ],
+      "flags": "ColdBlooded, Mindless, ImmuneFire, ImmuneCold, ImmunePoison, ImmuneLightning",
+      "size": 2
+    },
+    {
+      "id": "hydra",
+      "name": "Hydra",
+      "family": "Hydra",
+      "level": 22,
+      "rarity": 2,
+      "hitDice": "25d10",
+      "armourClass": 30,
+      "experience": 500,
+      "bravery": 90,
+      "awareness": 16,
+      "sleepiness": 40,
+      "attacks": [
+        { "method": "Bite", "damage": "1d10" },
+        { "method": "Bite", "damage": "1d10" },
+        { "method": "Bite", "damage": "1d10" },
+        { "method": "Bite", "damage": "1d10" }
+      ],
+      "flags": "Animal, Regenerates",
+      "size": 2
+    },
+    {
+      "id": "ogre_mage",
+      "name": "Ogre Mage",
+      "family": "Ogre",
+      "level": 22,
+      "rarity": 2,
+      "hitDice": "20d10",
+      "armourClass": 32,
+      "experience": 500,
+      "bravery": 80,
+      "awareness": 16,
+      "sleepiness": 30,
+      "attacks": [
+        { "method": "Hit", "damage": "2d8" },
+        { "method": "Hit", "damage": "2d8" }
+      ],
+      "flags": "Evil, Giant, Regenerates",
+      "spells": "Blink, FrostBolt, Paralyze, Darkness",
+      "spellOneIn": 4,
+      "dropChance": 80,
+      "maxDrops": 2,
+      "carriesGold": true
+    },
+    {
+      "id": "frost_giant",
+      "name": "Frost Giant",
+      "family": "Giant",
+      "level": 24,
+      "hitDice": "28d10",
+      "armourClass": 36,
+      "experience": 700,
+      "bravery": 90,
+      "awareness": 14,
+      "sleepiness": 40,
+      "attacks": [
+        { "method": "Hit", "damage": "3d10" },
+        { "method": "Hit", "effect": "Cold", "damage": "3d10" }
+      ],
+      "flags": "Evil, Giant, ImmuneCold",
+      "dropChance": 70,
+      "maxDrops": 2,
+      "carriesGold": true,
+      "size": 2
+    },
+    {
+      "id": "vampire",
+      "name": "Vampire",
+      "family": "Vampire",
+      "level": 25,
+      "rarity": 2,
+      "hitDice": "25d12",
+      "armourClass": 40,
+      "speed": 11,
+      "experience": 900,
+      "bravery": 90,
+      "awareness": 18,
+      "sleepiness": 30,
+      "attacks": [
+        { "method": "Bite", "effect": "DrainXp", "damage": "1d10" },
+        { "method": "Hit", "damage": "1d8" }
+      ],
+      "flags": "Evil, Undead, Regenerates, ColdBlooded, HurtByLight, ImmunePoison",
+      "spells": "CauseWounds, Scare, Paralyze, Darkness",
+      "spellOneIn": 5,
+      "dropChance": 80,
+      "maxDrops": 2,
+      "carriesGold": true
+    },
+    {
+      "id": "young_red_dragon",
+      "name": "Young Red Dragon",
+      "family": "YoungDragon",
+      "level": 26,
+      "rarity": 2,
+      "hitDice": "26d10",
+      "armourClass": 44,
+      "experience": 1200,
+      "bravery": 90,
+      "awareness": 18,
+      "sleepiness": 70,
+      "attacks": [
+        { "method": "Claw", "damage": "2d8" },
+        { "method": "Claw", "damage": "2d8" },
+        { "method": "Bite", "damage": "3d10" }
+      ],
+      "flags": "Evil, Dragon, ImmuneFire",
+      "spells": "Scare, BreathFire",
+      "spellOneIn": 6,
+      "dropChance": 100,
+      "maxDrops": 3,
+      "carriesGold": true,
+      "size": 2
+    },
+    {
+      "id": "fire_giant",
+      "name": "Fire Giant",
+      "family": "Giant",
+      "level": 28,
+      "hitDice": "32d10",
+      "armourClass": 40,
+      "experience": 1100,
+      "bravery": 90,
+      "awareness": 14,
+      "sleepiness": 40,
+      "attacks": [
+        { "method": "Hit", "effect": "Fire", "damage": "4d10" },
+        { "method": "Hit", "damage": "4d10" }
+      ],
+      "flags": "Evil, Giant, ImmuneFire",
+      "dropChance": 70,
+      "maxDrops": 2,
+      "carriesGold": true,
+      "size": 2
+    },
+    {
+      "id": "adult_black_dragon",
+      "name": "Adult Black Dragon",
+      "family": "Dragon",
+      "level": 30,
+      "rarity": 3,
+      "hitDice": "35d10",
+      "armourClass": 55,
+      "experience": 2500,
+      "bravery": 90,
+      "awareness": 20,
+      "sleepiness": 70,
+      "attacks": [
+        { "method": "Claw", "damage": "2d10" },
+        { "method": "Claw", "damage": "2d10" },
+        { "method": "Bite", "damage": "4d10" }
+      ],
+      "flags": "Evil, Dragon, ImmuneAcid",
+      "spells": "Scare, BreathAcid",
+      "spellOneIn": 5,
+      "dropChance": 100,
+      "maxDrops": 4,
+      "carriesGold": true,
+      "size": 2
+    },
+    {
+      "id": "purple_worm",
+      "name": "Purple Worm",
+      "family": "Worm",
+      "level": 30,
+      "rarity": 3,
+      "hitDice": "40d12",
+      "armourClass": 30,
+      "speed": 8,
+      "experience": 2200,
+      "bravery": 100,
+      "sleepiness": 50,
+      "attacks": [
+        { "method": "Bite", "damage": "4d10" },
+        { "method": "Sting", "effect": "Poison", "damage": "3d8" }
+      ],
+      "flags": "Animal, Mindless",
+      "dropChance": 60,
+      "maxDrops": 3,
+      "size": 2
+    },
+    {
+      "id": "adult_blue_dragon",
+      "name": "Adult Blue Dragon",
+      "family": "Dragon",
+      "level": 33,
+      "rarity": 3,
+      "hitDice": "38d10",
+      "armourClass": 58,
+      "experience": 3200,
+      "bravery": 90,
+      "awareness": 20,
+      "sleepiness": 70,
+      "attacks": [
+        { "method": "Claw", "damage": "2d10" },
+        { "method": "Claw", "damage": "2d10" },
+        { "method": "Bite", "damage": "4d10" }
+      ],
+      "flags": "Evil, Dragon, ImmuneLightning",
+      "spells": "Scare, BreathLightning",
+      "spellOneIn": 5,
+      "dropChance": 100,
+      "maxDrops": 4,
+      "carriesGold": true,
+      "size": 2
+    },
+    {
+      "id": "lich",
+      "name": "Lich",
+      "family": "Lich",
+      "level": 35,
+      "rarity": 3,
+      "hitDice": "30d10",
+      "armourClass": 50,
+      "speed": 12,
+      "experience": 5000,
+      "bravery": 90,
+      "awareness": 20,
+      "sleepiness": 20,
+      "attacks": [
+        { "method": "Touch", "effect": "Cold", "damage": "3d8" },
+        { "method": "Touch", "effect": "DrainXp", "damage": "2d8" }
+      ],
+      "flags": "Evil, Undead, ColdBlooded, ImmuneCold, ImmunePoison, ImmuneLightning",
+      "spells": "Blink, Teleport, FrostBolt, LightningBolt, CauseWounds, Scare, Paralyze, SummonUndead",
+      "spellOneIn": 2,
+      "dropChance": 100,
+      "maxDrops": 4,
+      "carriesGold": true
+    },
+    {
+      "id": "storm_giant",
+      "name": "Storm Giant",
+      "family": "Giant",
+      "level": 38,
+      "rarity": 3,
+      "hitDice": "40d10",
+      "armourClass": 50,
+      "speed": 11,
+      "experience": 4500,
+      "bravery": 90,
+      "awareness": 16,
+      "sleepiness": 40,
+      "attacks": [
+        { "method": "Hit", "damage": "5d10" },
+        { "method": "Hit", "effect": "Lightning", "damage": "5d10" }
+      ],
+      "flags": "Giant, ImmuneCold, ImmuneLightning",
+      "spells": "LightningBolt",
+      "spellOneIn": 5,
+      "dropChance": 80,
+      "maxDrops": 3,
+      "carriesGold": true,
+      "size": 2
+    },
+    {
+      "id": "adult_red_dragon",
+      "name": "Adult Red Dragon",
+      "family": "Dragon",
+      "level": 38,
+      "rarity": 3,
+      "hitDice": "42d10",
+      "armourClass": 62,
+      "experience": 4800,
+      "bravery": 90,
+      "awareness": 20,
+      "sleepiness": 70,
+      "attacks": [
+        { "method": "Claw", "damage": "3d10" },
+        { "method": "Claw", "damage": "3d10" },
+        { "method": "Bite", "damage": "5d10" }
+      ],
+      "flags": "Evil, Dragon, ImmuneFire",
+      "spells": "Scare, BreathFire",
+      "spellOneIn": 5,
+      "dropChance": 100,
+      "maxDrops": 4,
+      "carriesGold": true,
+      "size": 2
+    },
+    {
+      "id": "pit_fiend",
+      "name": "Pit Fiend",
+      "family": "MajorDemon",
+      "level": 45,
+      "rarity": 4,
+      "hitDice": "50d10",
+      "armourClass": 70,
+      "speed": 13,
+      "experience": 20000,
+      "bravery": 100,
+      "awareness": 20,
+      "sleepiness": 10,
+      "attacks": [
+        { "method": "Hit", "damage": "3d10" },
+        { "method": "Bite", "effect": "Poison", "damage": "4d6" },
+        { "method": "Claw", "damage": "2d8" },
+        { "method": "Claw", "damage": "2d8" }
+      ],
+      "flags": "Evil, Demon, Flying, ImmuneFire, ImmunePoison",
+      "spells": "Teleport, FireBolt, Scare, Paralyze, SummonMonster",
+      "spellOneIn": 3,
+      "dropChance": 100,
+      "maxDrops": 5,
+      "carriesGold": true,
+      "size": 2
+    },
+    {
+      "id": "ancient_red_dragon",
+      "name": "Ancient Red Dragon",
+      "family": "Dragon",
+      "level": 50,
+      "rarity": 4,
+      "hitDice": "60d10",
+      "armourClass": 80,
+      "speed": 12,
+      "experience": 30000,
+      "bravery": 100,
+      "awareness": 25,
+      "sleepiness": 80,
+      "attacks": [
+        { "method": "Claw", "damage": "4d10" },
+        { "method": "Claw", "damage": "4d10" },
+        { "method": "Bite", "damage": "6d10" },
+        { "method": "Crush", "damage": "4d12" }
+      ],
+      "flags": "Evil, Dragon, ImmuneFire",
+      "spells": "Confuse, Scare, BreathFire",
+      "spellOneIn": 4,
+      "dropChance": 100,
+      "maxDrops": 6,
+      "carriesGold": true,
+      "size": 2
+    },
+    {
+      "id": "keep_guard",
+      "name": "Keep Guard",
+      "family": "Person",
+      "level": 3,
+      "hitDice": "4d8",
+      "armourClass": 18,
+      "experience": 9,
+      "bravery": 70,
+      "awareness": 12,
+      "sleepiness": 30,
+      "attacks": [
+        { "method": "Hit", "damage": "1d8" }
+      ],
+      "groupMin": 2,
+      "groupMax": 4,
+      "dropChance": 30,
+      "maxDrops": 1,
+      "carriesGold": true,
+      "native": "Keep"
+    },
+    {
+      "id": "man_at_arms",
+      "name": "Man-at-Arms",
+      "family": "Person",
+      "level": 7,
+      "hitDice": "8d8",
+      "armourClass": 24,
+      "experience": 30,
+      "bravery": 80,
+      "awareness": 12,
+      "sleepiness": 30,
+      "attacks": [
+        { "method": "Hit", "damage": "1d10" }
+      ],
+      "groupMin": 2,
+      "groupMax": 4,
+      "dropChance": 40,
+      "maxDrops": 1,
+      "carriesGold": true,
+      "native": "Keep"
+    },
+    {
+      "id": "keep_knight",
+      "name": "Knight of the Keep",
+      "family": "Person",
+      "level": 12,
+      "hitDice": "12d10",
+      "armourClass": 32,
+      "experience": 120,
+      "bravery": 100,
+      "awareness": 14,
+      "sleepiness": 20,
+      "attacks": [
+        { "method": "Hit", "damage": "2d6" },
+        { "method": "Hit", "damage": "1d8" }
+      ],
+      "groupMax": 2,
+      "dropChance": 60,
+      "maxDrops": 1,
+      "carriesGold": true,
+      "native": "Keep"
+    },
+    {
+      "id": "black_knight",
+      "name": "Black Knight",
+      "family": "Person",
+      "level": 20,
+      "hitDice": "20d10",
+      "armourClass": 38,
+      "experience": 400,
+      "bravery": 100,
+      "awareness": 14,
+      "sleepiness": 20,
+      "attacks": [
+        { "method": "Hit", "damage": "2d10" },
+        { "method": "Hit", "damage": "2d8" }
+      ],
+      "flags": "Evil",
+      "spells": "Scare",
+      "spellOneIn": 8,
+      "groupMax": 2,
+      "dropChance": 70,
+      "maxDrops": 2,
+      "carriesGold": true,
+      "native": "Keep"
+    },
+    {
+      "id": "dread_champion",
+      "name": "Dread Champion",
+      "family": "Person",
+      "level": 30,
+      "hitDice": "30d10",
+      "armourClass": 46,
+      "experience": 1300,
+      "bravery": 100,
+      "awareness": 16,
+      "sleepiness": 20,
+      "attacks": [
+        { "method": "Hit", "damage": "4d8" },
+        { "method": "Hit", "damage": "3d8" }
+      ],
+      "flags": "Evil",
+      "spells": "CauseWounds, Scare",
+      "spellOneIn": 6,
+      "dropChance": 80,
+      "maxDrops": 2,
+      "carriesGold": true,
+      "native": "Keep"
+    },
+    {
+      "id": "cultist",
+      "name": "Cultist",
+      "family": "Person",
+      "level": 4,
+      "hitDice": "4d8",
+      "armourClass": 14,
+      "experience": 12,
+      "bravery": 60,
+      "awareness": 12,
+      "sleepiness": 20,
+      "attacks": [
+        { "method": "Hit", "damage": "1d6" }
+      ],
+      "flags": "Evil",
+      "spells": "Scare",
+      "spellOneIn": 6,
+      "groupMin": 2,
+      "groupMax": 5,
+      "dropChance": 30,
+      "maxDrops": 1,
+      "carriesGold": true,
+      "native": "Ruins"
+    },
+    {
+      "id": "bone_priest",
+      "name": "Bone Priest",
+      "family": "Skeleton",
+      "level": 10,
+      "hitDice": "10d8",
+      "armourClass": 22,
+      "experience": 80,
+      "bravery": 100,
+      "awareness": 14,
+      "sleepiness": 20,
+      "attacks": [
+        { "method": "Hit", "damage": "1d8" }
+      ],
+      "flags": "Evil, Undead, ColdBlooded, ImmunePoison",
+      "spells": "CauseWounds, SummonUndead",
+      "spellOneIn": 4,
+      "dropChance": 50,
+      "maxDrops": 1,
+      "native": "Ruins"
+    },
+    {
+      "id": "grave_knight",
+      "name": "Grave Knight",
+      "family": "Skeleton",
+      "level": 16,
+      "hitDice": "16d10",
+      "armourClass": 34,
+      "experience": 260,
+      "bravery": 100,
+      "awareness": 12,
+      "sleepiness": 20,
+      "attacks": [
+        { "method": "Hit", "damage": "2d8" },
+        { "method": "Hit", "effect": "Cold", "damage": "1d10" }
+      ],
+      "flags": "Evil, Undead, ColdBlooded, ImmuneCold, ImmunePoison",
+      "groupMax": 2,
+      "dropChance": 60,
+      "maxDrops": 1,
+      "native": "Ruins"
+    },
+    {
+      "id": "crypt_horror",
+      "name": "Crypt Horror",
+      "family": "Zombie",
+      "level": 22,
+      "hitDice": "24d10",
+      "armourClass": 30,
+      "experience": 500,
+      "bravery": 100,
+      "awareness": 12,
+      "sleepiness": 40,
+      "attacks": [
+        { "method": "Claw", "effect": "Paralyze", "damage": "2d8" },
+        { "method": "Bite", "damage": "2d6" }
+      ],
+      "flags": "Evil, Undead, ColdBlooded, ImmunePoison",
+      "native": "Ruins"
+    },
+    {
+      "id": "cult_archpriest",
+      "name": "Cult Archpriest",
+      "family": "Person",
+      "level": 28,
+      "hitDice": "26d10",
+      "armourClass": 40,
+      "experience": 1000,
+      "bravery": 70,
+      "awareness": 18,
+      "sleepiness": 10,
+      "attacks": [
+        { "method": "Hit", "damage": "2d6" }
+      ],
+      "flags": "Evil",
+      "spells": "CauseWounds, Paralyze, Darkness, SummonUndead",
+      "spellOneIn": 3,
+      "dropChance": 80,
+      "maxDrops": 2,
+      "carriesGold": true,
+      "native": "Ruins"
+    },
+    {
+      "id": "arcane_sentry",
+      "name": "Arcane Sentry",
+      "family": "Golem",
+      "level": 4,
+      "hitDice": "6d8",
+      "armourClass": 22,
+      "speed": 8,
+      "experience": 14,
+      "bravery": 100,
+      "attacks": [
+        { "method": "Hit", "damage": "1d8" }
+      ],
+      "flags": "ColdBlooded, Mindless, ImmunePoison",
+      "groupMax": 2,
+      "native": "Tower"
+    },
+    {
+      "id": "clockwork_guard",
+      "name": "Clockwork Guard",
+      "family": "Golem",
+      "level": 9,
+      "hitDice": "11d10",
+      "armourClass": 30,
+      "speed": 9,
+      "experience": 60,
+      "bravery": 100,
+      "attacks": [
+        { "method": "Hit", "damage": "2d6" },
+        { "method": "Hit", "damage": "1d6" }
+      ],
+      "flags": "ColdBlooded, Mindless, ImmunePoison",
+      "groupMax": 2,
+      "native": "Tower"
+    },
+    {
+      "id": "battle_mage",
+      "name": "Battle Mage",
+      "family": "Person",
+      "level": 15,
+      "hitDice": "12d8",
+      "armourClass": 24,
+      "experience": 240,
+      "bravery": 60,
+      "awareness": 16,
+      "sleepiness": 20,
+      "attacks": [
+        { "method": "Hit", "damage": "1d8" }
+      ],
+      "flags": "Evil",
+      "spells": "Blink, FireBolt, FrostBolt",
+      "spellOneIn": 3,
+      "groupMax": 2,
+      "dropChance": 70,
+      "maxDrops": 1,
+      "carriesGold": true,
+      "native": "Tower"
+    },
+    {
+      "id": "living_spell",
+      "name": "Living Spell",
+      "family": "Elemental",
+      "level": 19,
+      "hitDice": "16d8",
+      "armourClass": 30,
+      "speed": 14,
+      "experience": 330,
+      "bravery": 100,
+      "awareness": 14,
+      "attacks": [
+        { "method": "Touch", "effect": "Lightning", "damage": "2d8" }
+      ],
+      "flags": "Erratic, Mindless, ImmuneFire, ImmuneCold, ImmuneLightning",
+      "spells": "MagicMissile",
+      "spellOneIn": 3,
+      "groupMax": 2,
+      "native": "Tower"
+    },
+    {
+      "id": "warlock",
+      "name": "Warlock",
+      "family": "Person",
+      "level": 30,
+      "hitDice": "24d10",
+      "armourClass": 38,
+      "experience": 1200,
+      "bravery": 60,
+      "awareness": 18,
+      "sleepiness": 10,
+      "attacks": [
+        { "method": "Hit", "damage": "2d6" }
+      ],
+      "flags": "Evil",
+      "spells": "Blink, FireBolt, LightningBolt, Confuse, SummonMonster",
+      "spellOneIn": 2,
+      "dropChance": 80,
+      "maxDrops": 2,
+      "carriesGold": true,
+      "native": "Tower"
+    },
+    {
+      "id": "cave_crawler",
+      "name": "Cave Crawler",
+      "family": "Centipede",
+      "level": 3,
+      "hitDice": "4d8",
+      "armourClass": 14,
+      "experience": 8,
+      "bravery": 70,
+      "sleepiness": 40,
+      "attacks": [
+        { "method": "Bite", "effect": "Poison", "damage": "1d6" }
+      ],
+      "flags": "Animal",
+      "groupMin": 2,
+      "groupMax": 5,
+      "native": "Cave"
+    },
+    {
+      "id": "tunnel_spider",
+      "name": "Tunnel Spider",
+      "family": "Spider",
+      "level": 7,
+      "hitDice": "7d8",
+      "armourClass": 20,
+      "speed": 12,
+      "experience": 30,
+      "bravery": 80,
+      "awareness": 14,
+      "sleepiness": 30,
+      "attacks": [
+        { "method": "Bite", "effect": "Poison", "damage": "1d8" }
+      ],
+      "flags": "Animal",
+      "groupMin": 2,
+      "groupMax": 4,
+      "native": "Cave"
+    },
+    {
+      "id": "rock_grub",
+      "name": "Rock Grub",
+      "family": "Worm",
+      "level": 12,
+      "hitDice": "14d10",
+      "armourClass": 30,
+      "speed": 8,
+      "experience": 110,
+      "bravery": 100,
+      "awareness": 8,
+      "sleepiness": 50,
+      "attacks": [
+        { "method": "Bite", "damage": "2d8" }
+      ],
+      "flags": "Animal",
+      "groupMax": 3,
+      "native": "Cave"
+    },
+    {
+      "id": "deep_crawler",
+      "name": "Deep Crawler",
+      "family": "Centipede",
+      "level": 18,
+      "hitDice": "18d10",
+      "armourClass": 34,
+      "speed": 12,
+      "experience": 320,
+      "bravery": 90,
+      "awareness": 12,
+      "sleepiness": 30,
+      "attacks": [
+        { "method": "Bite", "effect": "Poison", "damage": "2d8" },
+        { "method": "Sting", "damage": "1d10" }
+      ],
+      "flags": "Animal",
+      "groupMax": 2,
+      "native": "Cave"
+    },
+    {
+      "id": "cave_wyrm",
+      "name": "Cave Wyrm",
+      "family": "YoungDragon",
+      "level": 26,
+      "hitDice": "26d10",
+      "armourClass": 40,
+      "experience": 900,
+      "bravery": 100,
+      "awareness": 14,
+      "sleepiness": 60,
+      "attacks": [
+        { "method": "Bite", "damage": "3d8" },
+        { "method": "Claw", "damage": "2d8" }
+      ],
+      "flags": "Evil, Dragon, ImmuneAcid",
+      "spells": "BreathAcid",
+      "spellOneIn": 5,
+      "dropChance": 80,
+      "maxDrops": 2,
+      "carriesGold": true,
+      "native": "Cave",
+      "size": 2
+    },
+    {
+      "id": "crag_bat",
+      "name": "Crag Bat",
+      "family": "Bat",
+      "level": 2,
+      "hitDice": "3d8",
+      "armourClass": 14,
+      "speed": 14,
+      "experience": 6,
+      "bravery": 60,
+      "awareness": 12,
+      "sleepiness": 30,
+      "attacks": [
+        { "method": "Bite", "damage": "1d6" }
+      ],
+      "flags": "Animal, Erratic, Flying",
+      "groupMin": 3,
+      "groupMax": 6,
+      "native": "Eyrie"
+    },
+    {
+      "id": "harpy_screecher",
+      "name": "Harpy Screecher",
+      "family": "Hybrid",
+      "level": 9,
+      "hitDice": "9d8",
+      "armourClass": 22,
+      "speed": 13,
+      "experience": 60,
+      "bravery": 70,
+      "awareness": 14,
+      "sleepiness": 20,
+      "attacks": [
+        { "method": "Claw", "damage": "1d8" },
+        { "method": "Claw", "damage": "1d8" }
+      ],
+      "flags": "Evil, Flying",
+      "spells": "Scare",
+      "spellOneIn": 5,
+      "groupMin": 2,
+      "groupMax": 4,
+      "native": "Eyrie"
+    },
+    {
+      "id": "griffon",
+      "name": "Griffon",
+      "family": "Hybrid",
+      "level": 15,
+      "hitDice": "16d10",
+      "armourClass": 30,
+      "speed": 18,
+      "experience": 230,
+      "bravery": 90,
+      "awareness": 16,
+      "sleepiness": 30,
+      "attacks": [
+        { "method": "Claw", "damage": "2d6" },
+        { "method": "Bite", "damage": "2d8" }
+      ],
+      "flags": "Animal, Flying",
+      "groupMax": 2,
+      "native": "Eyrie",
+      "size": 2
+    },
+    {
+      "id": "storm_wisp",
+      "name": "Storm Wisp",
+      "family": "Elemental",
+      "level": 20,
+      "hitDice": "15d8",
+      "armourClass": 34,
+      "speed": 16,
+      "experience": 350,
+      "bravery": 100,
+      "awareness": 14,
+      "attacks": [
+        { "method": "Touch", "effect": "Lightning", "damage": "2d8" }
+      ],
+      "flags": "Erratic, Flying, Mindless, ImmuneLightning",
+      "spells": "LightningBolt",
+      "spellOneIn": 3,
+      "groupMax": 3,
+      "native": "Eyrie"
+    },
+    {
+      "id": "roc",
+      "name": "Roc",
+      "family": "Hybrid",
+      "level": 30,
+      "rarity": 2,
+      "hitDice": "32d10",
+      "armourClass": 40,
+      "speed": 14,
+      "experience": 1200,
+      "bravery": 100,
+      "awareness": 16,
+      "sleepiness": 40,
+      "attacks": [
+        { "method": "Claw", "damage": "3d10" },
+        { "method": "Bite", "damage": "4d8" }
+      ],
+      "flags": "Animal, Flying",
+      "native": "Eyrie",
+      "size": 2
+    },
+    {
+      "id": "animated_armour",
+      "name": "Animated Armour",
+      "family": "Golem",
+      "level": 5,
+      "hitDice": "7d8",
+      "armourClass": 26,
+      "speed": 9,
+      "experience": 18,
+      "bravery": 100,
+      "attacks": [
+        { "method": "Hit", "damage": "1d8" }
+      ],
+      "flags": "ColdBlooded, Mindless, ImmunePoison",
+      "groupMax": 3,
+      "native": "Vault"
+    },
+    {
+      "id": "mimic",
+      "name": "Mimic",
+      "family": "Jelly",
+      "level": 9,
+      "hitDice": "12d8",
+      "armourClass": 20,
+      "speed": 8,
+      "experience": 70,
+      "bravery": 100,
+      "awareness": 4,
+      "sleepiness": 90,
+      "attacks": [
+        { "method": "Bite", "effect": "Acid", "damage": "2d6" }
+      ],
+      "flags": "ColdBlooded, Mindless, ImmuneAcid",
+      "dropChance": 100,
+      "maxDrops": 2,
+      "carriesGold": true,
+      "native": "Vault"
+    },
+    {
+      "id": "vault_warden",
+      "name": "Vault Warden",
+      "family": "Person",
+      "level": 14,
+      "hitDice": "14d10",
+      "armourClass": 32,
+      "experience": 200,
+      "bravery": 90,
+      "awareness": 16,
+      "sleepiness": 20,
+      "attacks": [
+        { "method": "Hit", "damage": "2d8" }
+      ],
+      "spells": "Slow, Paralyze",
+      "spellOneIn": 6,
+      "groupMax": 3,
+      "dropChance": 60,
+      "maxDrops": 1,
+      "carriesGold": true,
+      "native": "Vault"
+    },
+    {
+      "id": "living_shadow",
+      "name": "Living Shadow",
+      "family": "Ghost",
+      "level": 20,
+      "hitDice": "16d10",
+      "armourClass": 34,
+      "speed": 12,
+      "experience": 380,
+      "bravery": 90,
+      "awareness": 16,
+      "sleepiness": 20,
+      "attacks": [
+        { "method": "Touch", "effect": "DrainStr", "damage": "2d6" }
+      ],
+      "flags": "Evil, Undead, Invisible, ColdBlooded, PassesWalls, HurtByLight, ImmunePoison",
+      "native": "Vault"
+    },
+    {
+      "id": "brass_sentinel",
+      "name": "Brass Sentinel",
+      "family": "Golem",
+      "level": 28,
+      "hitDice": "30d10",
+      "armourClass": 50,
+      "speed": 8,
+      "experience": 1000,
+      "bravery": 100,
+      "awareness": 12,
+      "attacks": [
+        { "method": "Hit", "damage": "3d10" },
+        { "method": "Hit", "damage": "3d10" }
+      ],
+      "flags": "ColdBlooded, Mindless, ImmuneFire, ImmunePoison, ImmuneAcid",
+      "native": "Vault"
+    }
+  ],
+  "items": [
+    {
+      "id": "dagger",
+      "name": "Dagger",
+      "weightGrams": 425,
+      "cost": 10,
+      "damage": "1d4"
+    },
+    {
+      "id": "short_sword",
+      "name": "Short Sword",
+      "level": 1,
+      "weightGrams": 850,
+      "cost": 25,
+      "damage": "1d6"
+    },
+    {
+      "id": "rapier",
+      "name": "Rapier",
+      "level": 4,
+      "weightGrams": 935,
+      "cost": 60,
+      "damage": "1d8"
+    },
+    {
+      "id": "scimitar",
+      "name": "Scimitar",
+      "level": 5,
+      "weightGrams": 1275,
+      "cost": 75,
+      "damage": "2d4"
+    },
+    {
+      "id": "longsword",
+      "name": "Longsword",
+      "level": 7,
+      "weightGrams": 1275,
+      "cost": 120,
+      "damage": "1d10"
+    },
+    {
+      "id": "greatsword",
+      "name": "Greatsword",
+      "level": 14,
+      "rarity": 2,
+      "weightGrams": 2550,
+      "cost": 300,
+      "damage": "2d6"
+    },
+    {
+      "id": "executioners_blade",
+      "name": "Executioner's Blade",
+      "level": 30,
+      "rarity": 4,
+      "weightGrams": 4250,
+      "cost": 1500,
+      "damage": "4d5"
+    },
+    {
+      "id": "club",
+      "name": "Club",
+      "kind": "Blunt",
+      "weightGrams": 850,
+      "cost": 2,
+      "damage": "1d4"
+    },
+    {
+      "id": "quarterstaff",
+      "name": "Quarterstaff",
+      "kind": "Blunt",
+      "weightGrams": 1700,
+      "cost": 5,
+      "damage": "1d6"
+    },
+    {
+      "id": "mace",
+      "name": "Mace",
+      "kind": "Blunt",
+      "level": 1,
+      "weightGrams": 1700,
+      "cost": 20,
+      "damage": "1d6"
+    },
+    {
+      "id": "morningstar",
+      "name": "Morningstar",
+      "kind": "Blunt",
+      "level": 6,
+      "weightGrams": 1700,
+      "cost": 80,
+      "damage": "1d8"
+    },
+    {
+      "id": "flail",
+      "name": "Flail",
+      "kind": "Blunt",
+      "level": 8,
+      "weightGrams": 1275,
+      "cost": 100,
+      "damage": "2d4"
+    },
+    {
+      "id": "warhammer",
+      "name": "Warhammer",
+      "kind": "Blunt",
+      "level": 10,
+      "weightGrams": 2125,
+      "cost": 150,
+      "damage": "1d10"
+    },
+    {
+      "id": "maul",
+      "name": "Maul",
+      "kind": "Blunt",
+      "level": 15,
+      "rarity": 2,
+      "weightGrams": 4250,
+      "cost": 300,
+      "damage": "2d6"
+    },
+    {
+      "id": "spear",
+      "name": "Spear",
+      "kind": "Polearm",
+      "level": 1,
+      "weightGrams": 1275,
+      "cost": 15,
+      "damage": "1d6"
+    },
+    {
+      "id": "handaxe",
+      "name": "Handaxe",
+      "kind": "Polearm",
+      "level": 2,
+      "weightGrams": 850,
+      "cost": 20,
+      "damage": "1d6"
+    },
+    {
+      "id": "battleaxe",
+      "name": "Battleaxe",
+      "kind": "Polearm",
+      "level": 7,
+      "weightGrams": 1700,
+      "cost": 110,
+      "damage": "1d10"
+    },
+    {
+      "id": "glaive",
+      "name": "Glaive",
+      "kind": "Polearm",
+      "level": 11,
+      "weightGrams": 2550,
+      "cost": 200,
+      "damage": "1d12"
+    },
+    {
+      "id": "halberd",
+      "name": "Halberd",
+      "kind": "Polearm",
+      "level": 13,
+      "rarity": 2,
+      "weightGrams": 2550,
+      "cost": 250,
+      "damage": "2d6"
+    },
+    {
+      "id": "greataxe",
+      "name": "Greataxe",
+      "kind": "Polearm",
+      "level": 16,
+      "rarity": 2,
+      "weightGrams": 2975,
+      "cost": 350,
+      "damage": "2d7"
+    },
+    {
+      "id": "sling",
+      "name": "Sling",
+      "kind": "Launcher",
+      "weightGrams": 85,
+      "cost": 5,
+      "multiplier": 2,
+      "ammo": "SlingBullet"
+    },
+    {
+      "id": "shortbow",
+      "name": "Shortbow",
+      "kind": "Launcher",
+      "level": 2,
+      "weightGrams": 850,
+      "cost": 50,
+      "multiplier": 2,
+      "ammo": "Arrow"
+    },
+    {
+      "id": "longbow",
+      "name": "Longbow",
+      "kind": "Launcher",
+      "level": 10,
+      "weightGrams": 1275,
+      "cost": 200,
+      "multiplier": 3,
+      "ammo": "Arrow"
+    },
+    {
+      "id": "light_crossbow",
+      "name": "Light Crossbow",
+      "kind": "Launcher",
+      "level": 8,
+      "weightGrams": 2125,
+      "cost": 150,
+      "multiplier": 3,
+      "ammo": "Bolt"
+    },
+    {
+      "id": "heavy_crossbow",
+      "name": "Heavy Crossbow",
+      "kind": "Launcher",
+      "level": 20,
+      "rarity": 2,
+      "weightGrams": 6800,
+      "cost": 500,
+      "multiplier": 4,
+      "ammo": "Bolt"
+    },
+    {
+      "id": "sling_bullet",
+      "name": "Sling Bullet",
+      "kind": "Ammo",
+      "weightGrams": 34,
+      "cost": 1,
+      "damage": "1d4",
+      "ammo": "SlingBullet",
+      "stackable": true,
+      "defaultQuantity": 20
+    },
+    {
+      "id": "arrow",
+      "name": "Arrow",
+      "kind": "Ammo",
+      "level": 1,
+      "weightGrams": 42,
+      "cost": 1,
+      "damage": "1d6",
+      "ammo": "Arrow",
+      "stackable": true,
+      "defaultQuantity": 20
+    },
+    {
+      "id": "bolt",
+      "name": "Crossbow Bolt",
+      "kind": "Ammo",
+      "level": 5,
+      "weightGrams": 60,
+      "cost": 2,
+      "damage": "1d8",
+      "ammo": "Bolt",
+      "stackable": true,
+      "defaultQuantity": 15
+    },
+    {
+      "id": "arrow_flame",
+      "name": "Flame Arrow",
+      "kind": "Ammo",
+      "level": 10,
+      "rarity": 3,
+      "weightGrams": 42,
+      "cost": 6,
+      "damage": "1d6",
+      "ammo": "Arrow",
+      "ammoEffect": "Flame",
+      "stackable": true,
+      "defaultQuantity": 10
+    },
+    {
+      "id": "arrow_frost",
+      "name": "Frost Arrow",
+      "kind": "Ammo",
+      "level": 10,
+      "rarity": 3,
+      "weightGrams": 42,
+      "cost": 6,
+      "damage": "1d6",
+      "ammo": "Arrow",
+      "ammoEffect": "Frost",
+      "stackable": true,
+      "defaultQuantity": 10
+    },
+    {
+      "id": "arrow_storm",
+      "name": "Storm Arrow",
+      "kind": "Ammo",
+      "level": 12,
+      "rarity": 3,
+      "weightGrams": 42,
+      "cost": 7,
+      "damage": "1d6",
+      "ammo": "Arrow",
+      "ammoEffect": "Storm",
+      "stackable": true,
+      "defaultQuantity": 10
+    },
+    {
+      "id": "arrow_venom",
+      "name": "Venom Arrow",
+      "kind": "Ammo",
+      "level": 10,
+      "rarity": 3,
+      "weightGrams": 42,
+      "cost": 6,
+      "damage": "1d6",
+      "ammo": "Arrow",
+      "ammoEffect": "Venom",
+      "stackable": true,
+      "defaultQuantity": 10
+    },
+    {
+      "id": "arrow_silver",
+      "name": "Silver Arrow",
+      "kind": "Ammo",
+      "level": 8,
+      "rarity": 2,
+      "weightGrams": 42,
+      "cost": 8,
+      "damage": "1d6",
+      "ammo": "Arrow",
+      "ammoEffect": "Silver",
+      "stackable": true,
+      "defaultQuantity": 10
+    },
+    {
+      "id": "arrow_bodkin",
+      "name": "Bodkin Arrow",
+      "kind": "Ammo",
+      "level": 10,
+      "rarity": 3,
+      "weightGrams": 42,
+      "cost": 8,
+      "damage": "1d6",
+      "ammo": "Arrow",
+      "ammoEffect": "Bodkin",
+      "stackable": true,
+      "defaultQuantity": 10
+    },
+    {
+      "id": "bolt_flame",
+      "name": "Flame Bolt",
+      "kind": "Ammo",
+      "level": 12,
+      "rarity": 3,
+      "weightGrams": 60,
+      "cost": 10,
+      "damage": "1d8",
+      "ammo": "Bolt",
+      "ammoEffect": "Flame",
+      "stackable": true,
+      "defaultQuantity": 10
+    },
+    {
+      "id": "bolt_frost",
+      "name": "Frost Bolt",
+      "kind": "Ammo",
+      "level": 12,
+      "rarity": 3,
+      "weightGrams": 60,
+      "cost": 10,
+      "damage": "1d8",
+      "ammo": "Bolt",
+      "ammoEffect": "Frost",
+      "stackable": true,
+      "defaultQuantity": 10
+    },
+    {
+      "id": "bolt_storm",
+      "name": "Storm Bolt",
+      "kind": "Ammo",
+      "level": 14,
+      "rarity": 3,
+      "weightGrams": 60,
+      "cost": 11,
+      "damage": "1d8",
+      "ammo": "Bolt",
+      "ammoEffect": "Storm",
+      "stackable": true,
+      "defaultQuantity": 10
+    },
+    {
+      "id": "bolt_venom",
+      "name": "Venom Bolt",
+      "kind": "Ammo",
+      "level": 12,
+      "rarity": 3,
+      "weightGrams": 60,
+      "cost": 10,
+      "damage": "1d8",
+      "ammo": "Bolt",
+      "ammoEffect": "Venom",
+      "stackable": true,
+      "defaultQuantity": 10
+    },
+    {
+      "id": "bolt_silver",
+      "name": "Silver Bolt",
+      "kind": "Ammo",
+      "level": 10,
+      "rarity": 2,
+      "weightGrams": 60,
+      "cost": 12,
+      "damage": "1d8",
+      "ammo": "Bolt",
+      "ammoEffect": "Silver",
+      "stackable": true,
+      "defaultQuantity": 10
+    },
+    {
+      "id": "bolt_bodkin",
+      "name": "Bodkin Bolt",
+      "kind": "Ammo",
+      "level": 12,
+      "rarity": 3,
+      "weightGrams": 60,
+      "cost": 12,
+      "damage": "1d8",
+      "ammo": "Bolt",
+      "ammoEffect": "Bodkin",
+      "stackable": true,
+      "defaultQuantity": 10
+    },
+    {
+      "id": "shot_flame",
+      "name": "Flame Shot",
+      "kind": "Ammo",
+      "level": 10,
+      "rarity": 3,
+      "weightGrams": 34,
+      "cost": 5,
+      "damage": "1d4",
+      "ammo": "SlingBullet",
+      "ammoEffect": "Flame",
+      "stackable": true,
+      "defaultQuantity": 10
+    },
+    {
+      "id": "shot_frost",
+      "name": "Frost Shot",
+      "kind": "Ammo",
+      "level": 10,
+      "rarity": 3,
+      "weightGrams": 34,
+      "cost": 5,
+      "damage": "1d4",
+      "ammo": "SlingBullet",
+      "ammoEffect": "Frost",
+      "stackable": true,
+      "defaultQuantity": 10
+    },
+    {
+      "id": "shot_silver",
+      "name": "Silver Shot",
+      "kind": "Ammo",
+      "level": 8,
+      "rarity": 2,
+      "weightGrams": 34,
+      "cost": 6,
+      "damage": "1d4",
+      "ammo": "SlingBullet",
+      "ammoEffect": "Silver",
+      "stackable": true,
+      "defaultQuantity": 10
+    },
+    {
+      "id": "robe",
+      "name": "Robe",
+      "kind": "BodyArmour",
+      "weightGrams": 850,
+      "cost": 2,
+      "armourClass": 2
+    },
+    {
+      "id": "padded_armour",
+      "name": "Padded Armour",
+      "kind": "BodyArmour",
+      "level": 1,
+      "weightGrams": 3400,
+      "cost": 10,
+      "armourClass": 4
+    },
+    {
+      "id": "leather_armour",
+      "name": "Leather Armour",
+      "kind": "BodyArmour",
+      "level": 1,
+      "weightGrams": 4250,
+      "cost": 20,
+      "armourClass": 8
+    },
+    {
+      "id": "hide_armour",
+      "name": "Hide Armour",
+      "kind": "BodyArmour",
+      "level": 3,
+      "weightGrams": 5100,
+      "cost": 30,
+      "armourClass": 10
+    },
+    {
+      "id": "studded_leather",
+      "name": "Studded Leather",
+      "kind": "BodyArmour",
+      "level": 5,
+      "weightGrams": 5525,
+      "cost": 80,
+      "armourClass": 12
+    },
+    {
+      "id": "chain_shirt",
+      "name": "Chain Shirt",
+      "kind": "BodyArmour",
+      "level": 8,
+      "weightGrams": 5525,
+      "cost": 200,
+      "armourClass": 16
+    },
+    {
+      "id": "scale_mail",
+      "name": "Scale Mail",
+      "kind": "BodyArmour",
+      "level": 12,
+      "weightGrams": 7225,
+      "cost": 300,
+      "armourClass": 20
+    },
+    {
+      "id": "breastplate",
+      "name": "Breastplate",
+      "kind": "BodyArmour",
+      "level": 15,
+      "rarity": 2,
+      "weightGrams": 6800,
+      "cost": 600,
+      "armourClass": 22
+    },
+    {
+      "id": "chain_mail",
+      "name": "Chain Mail",
+      "kind": "BodyArmour",
+      "level": 18,
+      "rarity": 2,
+      "weightGrams": 9350,
+      "cost": 700,
+      "armourClass": 26
+    },
+    {
+      "id": "half_plate",
+      "name": "Half Plate",
+      "kind": "BodyArmour",
+      "level": 22,
+      "rarity": 2,
+      "weightGrams": 10200,
+      "cost": 1200,
+      "armourClass": 30
+    },
+    {
+      "id": "splint_mail",
+      "name": "Splint Mail",
+      "kind": "BodyArmour",
+      "level": 24,
+      "rarity": 2,
+      "weightGrams": 11050,
+      "cost": 1000,
+      "armourClass": 30
+    },
+    {
+      "id": "plate_armour",
+      "name": "Plate Armour",
+      "kind": "BodyArmour",
+      "level": 30,
+      "rarity": 3,
+      "weightGrams": 14450,
+      "cost": 3000,
+      "armourClass": 38
+    },
+    {
+      "id": "buckler",
+      "name": "Buckler",
+      "kind": "Shield",
+      "level": 2,
+      "weightGrams": 1700,
+      "cost": 15,
+      "armourClass": 3
+    },
+    {
+      "id": "shield",
+      "name": "Shield",
+      "kind": "Shield",
+      "level": 5,
+      "weightGrams": 2550,
+      "cost": 40,
+      "armourClass": 6
+    },
+    {
+      "id": "tower_shield",
+      "name": "Tower Shield",
+      "kind": "Shield",
+      "level": 15,
+      "rarity": 2,
+      "weightGrams": 6800,
+      "cost": 300,
+      "armourClass": 10
+    },
+    {
+      "id": "cloak",
+      "name": "Cloak",
+      "kind": "Cloak",
+      "level": 1,
+      "weightGrams": 850,
+      "cost": 5,
+      "armourClass": 1
+    },
+    {
+      "id": "fur_cloak",
+      "name": "Fur Cloak",
+      "kind": "Cloak",
+      "level": 6,
+      "weightGrams": 1700,
+      "cost": 60,
+      "armourClass": 3
+    },
+    {
+      "id": "leather_cap",
+      "name": "Leather Cap",
+      "kind": "Helm",
+      "level": 1,
+      "weightGrams": 425,
+      "cost": 10,
+      "armourClass": 2
+    },
+    {
+      "id": "iron_helm",
+      "name": "Iron Helm",
+      "kind": "Helm",
+      "level": 6,
+      "weightGrams": 1700,
+      "cost": 75,
+      "armourClass": 5
+    },
+    {
+      "id": "great_helm",
+      "name": "Great Helm",
+      "kind": "Helm",
+      "level": 18,
+      "rarity": 2,
+      "weightGrams": 2975,
+      "cost": 300,
+      "armourClass": 8
+    },
+    {
+      "id": "leather_gloves",
+      "name": "Leather Gloves",
+      "kind": "Gloves",
+      "level": 1,
+      "weightGrams": 255,
+      "cost": 5,
+      "armourClass": 1
+    },
+    {
+      "id": "gauntlets",
+      "name": "Gauntlets",
+      "kind": "Gloves",
+      "level": 10,
+      "weightGrams": 1275,
+      "cost": 80,
+      "armourClass": 3
+    },
+    {
+      "id": "leather_boots",
+      "name": "Leather Boots",
+      "kind": "Boots",
+      "level": 1,
+      "weightGrams": 850,
+      "cost": 5,
+      "armourClass": 2
+    },
+    {
+      "id": "hard_boots",
+      "name": "Hard Leather Boots",
+      "kind": "Boots",
+      "level": 5,
+      "weightGrams": 1275,
+      "cost": 30,
+      "armourClass": 3
+    },
+    {
+      "id": "iron_boots",
+      "name": "Iron-Shod Boots",
+      "kind": "Boots",
+      "level": 12,
+      "weightGrams": 2550,
+      "cost": 150,
+      "armourClass": 5
+    },
+    {
+      "id": "ring_protection",
+      "name": "Ring of Protection",
+      "kind": "Ring",
+      "level": 10,
+      "rarity": 2,
+      "weightGrams": 20,
+      "cost": 500,
+      "toArmour": 8
+    },
+    {
+      "id": "ring_accuracy",
+      "name": "Ring of Accuracy",
+      "kind": "Ring",
+      "level": 10,
+      "rarity": 2,
+      "weightGrams": 20,
+      "cost": 500,
+      "toHit": 6
+    },
+    {
+      "id": "ring_damage",
+      "name": "Ring of Damage",
+      "kind": "Ring",
+      "level": 15,
+      "rarity": 3,
+      "weightGrams": 20,
+      "cost": 800,
+      "toDamage": 5
+    },
+    {
+      "id": "ring_fire_resistance",
+      "name": "Ring of Fire Resistance",
+      "kind": "Ring",
+      "level": 12,
+      "rarity": 2,
+      "weightGrams": 20,
+      "cost": 600,
+      "grants": "ResistFire"
+    },
+    {
+      "id": "ring_cold_resistance",
+      "name": "Ring of Cold Resistance",
+      "kind": "Ring",
+      "level": 12,
+      "rarity": 2,
+      "weightGrams": 20,
+      "cost": 600,
+      "grants": "ResistCold"
+    },
+    {
+      "id": "ring_lightning_resistance",
+      "name": "Ring of Lightning Resistance",
+      "kind": "Ring",
+      "level": 16,
+      "rarity": 2,
+      "weightGrams": 20,
+      "cost": 800,
+      "grants": "ResistLightning"
+    },
+    {
+      "id": "ring_acid_resistance",
+      "name": "Ring of Acid Resistance",
+      "kind": "Ring",
+      "level": 16,
+      "rarity": 2,
+      "weightGrams": 20,
+      "cost": 800,
+      "grants": "ResistAcid"
+    },
+    {
+      "id": "ring_free_action",
+      "name": "Ring of Free Action",
+      "kind": "Ring",
+      "level": 15,
+      "rarity": 3,
+      "weightGrams": 20,
+      "cost": 1500,
+      "grants": "FreeAction"
+    },
+    {
+      "id": "ring_strength",
+      "name": "Ring of Strength",
+      "kind": "Ring",
+      "level": 20,
+      "rarity": 4,
+      "weightGrams": 20,
+      "cost": 3000,
+      "affectedStat": "Str",
+      "statBonus": 2
+    },
+    {
+      "id": "ring_dexterity",
+      "name": "Ring of Dexterity",
+      "kind": "Ring",
+      "level": 20,
+      "rarity": 4,
+      "weightGrams": 20,
+      "cost": 3000,
+      "affectedStat": "Dex",
+      "statBonus": 2
+    },
+    {
+      "id": "ring_regeneration",
+      "name": "Ring of Regeneration",
+      "kind": "Ring",
+      "level": 25,
+      "rarity": 4,
+      "weightGrams": 20,
+      "cost": 4000,
+      "grants": "Regeneration"
+    },
+    {
+      "id": "ring_see_invisible",
+      "name": "Ring of See Invisible",
+      "kind": "Ring",
+      "level": 18,
+      "rarity": 3,
+      "weightGrams": 20,
+      "cost": 1500,
+      "grants": "SeeInvisible"
+    },
+    {
+      "id": "ring_fortitude",
+      "name": "Ring of Fortitude",
+      "kind": "Ring",
+      "level": 14,
+      "rarity": 3,
+      "weightGrams": 20,
+      "cost": 1200,
+      "grants": "SustainStats"
+    },
+    {
+      "id": "periapt_proof_poison",
+      "name": "Periapt of Proof against Poison",
+      "kind": "Amulet",
+      "level": 15,
+      "rarity": 3,
+      "weightGrams": 50,
+      "cost": 2000,
+      "grants": "ResistPoison"
+    },
+    {
+      "id": "amulet_health",
+      "name": "Amulet of Health",
+      "kind": "Amulet",
+      "level": 20,
+      "rarity": 4,
+      "weightGrams": 50,
+      "cost": 3000,
+      "affectedStat": "Con",
+      "statBonus": 2
+    },
+    {
+      "id": "amulet_wisdom",
+      "name": "Amulet of Wisdom",
+      "kind": "Amulet",
+      "level": 20,
+      "rarity": 4,
+      "weightGrams": 50,
+      "cost": 3000,
+      "affectedStat": "Wis",
+      "statBonus": 2
+    },
+    {
+      "id": "amulet_intellect",
+      "name": "Amulet of Intellect",
+      "kind": "Amulet",
+      "level": 20,
+      "rarity": 4,
+      "weightGrams": 50,
+      "cost": 3000,
+      "affectedStat": "Int",
+      "statBonus": 2
+    },
+    {
+      "id": "amulet_stealth",
+      "name": "Amulet of Shadows",
+      "kind": "Amulet",
+      "level": 8,
+      "rarity": 2,
+      "weightGrams": 50,
+      "cost": 800,
+      "grants": "Stealth"
+    },
+    {
+      "id": "torch",
+      "name": "Torch",
+      "kind": "Light",
+      "weightGrams": 300,
+      "cost": 1,
+      "lightRadius": 1
+    },
+    {
+      "id": "lantern",
+      "name": "Lantern",
+      "kind": "Light",
+      "level": 3,
+      "weightGrams": 800,
+      "cost": 50,
+      "lightRadius": 2
+    },
+    {
+      "id": "glowstone",
+      "name": "Glowstone",
+      "kind": "Light",
+      "level": 20,
+      "rarity": 4,
+      "weightGrams": 200,
+      "cost": 1500,
+      "lightRadius": 3
+    },
+    {
+      "id": "potion_healing",
+      "name": "Potion of Healing",
+      "pluralName": "Potions of Healing",
+      "kind": "Potion",
+      "level": 1,
+      "weightGrams": 80,
+      "cost": 20,
+      "effect": "Heal",
+      "power": "2d8+4",
+      "stackable": true
+    },
+    {
+      "id": "potion_greater_healing",
+      "name": "Potion of Greater Healing",
+      "pluralName": "Potions of Greater Healing",
+      "kind": "Potion",
+      "level": 10,
+      "weightGrams": 80,
+      "cost": 100,
+      "effect": "Heal",
+      "power": "4d8+8",
+      "stackable": true
+    },
+    {
+      "id": "potion_superior_healing",
+      "name": "Potion of Superior Healing",
+      "pluralName": "Potions of Superior Healing",
+      "kind": "Potion",
+      "level": 20,
+      "rarity": 2,
+      "weightGrams": 80,
+      "cost": 400,
+      "effect": "Heal",
+      "power": "8d8+16",
+      "stackable": true
+    },
+    {
+      "id": "potion_supreme_healing",
+      "name": "Potion of Supreme Healing",
+      "pluralName": "Potions of Supreme Healing",
+      "kind": "Potion",
+      "level": 35,
+      "rarity": 3,
+      "weightGrams": 80,
+      "cost": 1500,
+      "effect": "Heal",
+      "power": "10d20+40",
+      "stackable": true
+    },
+    {
+      "id": "potion_mana",
+      "name": "Potion of Restore Mana",
+      "pluralName": "Potions of Restore Mana",
+      "kind": "Potion",
+      "level": 15,
+      "rarity": 2,
+      "weightGrams": 80,
+      "cost": 350,
+      "effect": "RestoreMana",
+      "power": "4d8+10",
+      "stackable": true
+    },
+    {
+      "id": "potion_speed",
+      "name": "Potion of Speed",
+      "pluralName": "Potions of Speed",
+      "kind": "Potion",
+      "level": 12,
+      "rarity": 2,
+      "weightGrams": 80,
+      "cost": 300,
+      "effect": "Haste",
+      "power": "1d20+15",
+      "stackable": true
+    },
+    {
+      "id": "potion_heroism",
+      "name": "Potion of Heroism",
+      "pluralName": "Potions of Heroism",
+      "kind": "Potion",
+      "level": 5,
+      "weightGrams": 80,
+      "cost": 40,
+      "effect": "Heroism",
+      "power": "1d25+25",
+      "stackable": true
+    },
+    {
+      "id": "potion_berserk",
+      "name": "Potion of Berserk Fury",
+      "pluralName": "Potions of Berserk Fury",
+      "kind": "Potion",
+      "level": 12,
+      "rarity": 2,
+      "weightGrams": 80,
+      "cost": 150,
+      "effect": "Berserk",
+      "power": "1d25+25",
+      "stackable": true
+    },
+    {
+      "id": "potion_fire_resistance",
+      "name": "Potion of Fire Resistance",
+      "pluralName": "Potions of Fire Resistance",
+      "kind": "Potion",
+      "level": 8,
+      "weightGrams": 80,
+      "cost": 60,
+      "effect": "ResistFire",
+      "power": "1d20+20",
+      "stackable": true
+    },
+    {
+      "id": "potion_cold_resistance",
+      "name": "Potion of Cold Resistance",
+      "pluralName": "Potions of Cold Resistance",
+      "kind": "Potion",
+      "level": 8,
+      "weightGrams": 80,
+      "cost": 60,
+      "effect": "ResistCold",
+      "power": "1d20+20",
+      "stackable": true
+    },
+    {
+      "id": "potion_antitoxin",
+      "name": "Potion of Antitoxin",
+      "pluralName": "Potions of Antitoxin",
+      "kind": "Potion",
+      "level": 2,
+      "weightGrams": 80,
+      "cost": 25,
+      "effect": "CurePoison",
+      "stackable": true
+    },
+    {
+      "id": "potion_see_invisible",
+      "name": "Potion of See Invisible",
+      "pluralName": "Potions of See Invisible",
+      "kind": "Potion",
+      "level": 6,
+      "weightGrams": 80,
+      "cost": 50,
+      "effect": "SeeInvisible",
+      "power": "1d20+20",
+      "stackable": true
+    },
+    {
+      "id": "potion_giant_strength",
+      "name": "Potion of Giant Strength",
+      "pluralName": "Potions of Giant Strength",
+      "kind": "Potion",
+      "level": 30,
+      "rarity": 5,
+      "weightGrams": 80,
+      "cost": 5000,
+      "effect": "GainStat",
+      "power": "1",
+      "affectedStat": "Str",
+      "stackable": true
+    },
+    {
+      "id": "potion_toughness",
+      "name": "Potion of Toughness",
+      "pluralName": "Potions of Toughness",
+      "kind": "Potion",
+      "level": 30,
+      "rarity": 5,
+      "weightGrams": 80,
+      "cost": 5000,
+      "effect": "GainStat",
+      "power": "1",
+      "affectedStat": "Con",
+      "stackable": true
+    },
+    {
+      "id": "potion_grace",
+      "name": "Potion of Grace",
+      "pluralName": "Potions of Grace",
+      "kind": "Potion",
+      "level": 30,
+      "rarity": 5,
+      "weightGrams": 80,
+      "cost": 5000,
+      "effect": "GainStat",
+      "power": "1",
+      "affectedStat": "Dex",
+      "stackable": true
+    },
+    {
+      "id": "potion_brilliance",
+      "name": "Potion of Brilliance",
+      "pluralName": "Potions of Brilliance",
+      "kind": "Potion",
+      "level": 30,
+      "rarity": 5,
+      "weightGrams": 80,
+      "cost": 5000,
+      "effect": "GainStat",
+      "power": "1",
+      "affectedStat": "Int",
+      "stackable": true
+    },
+    {
+      "id": "potion_insight",
+      "name": "Potion of Insight",
+      "pluralName": "Potions of Insight",
+      "kind": "Potion",
+      "level": 30,
+      "rarity": 5,
+      "weightGrams": 80,
+      "cost": 5000,
+      "effect": "GainStat",
+      "power": "1",
+      "affectedStat": "Wis",
+      "stackable": true
+    },
+    {
+      "id": "potion_charm",
+      "name": "Potion of Charm",
+      "pluralName": "Potions of Charm",
+      "kind": "Potion",
+      "level": 30,
+      "rarity": 5,
+      "weightGrams": 80,
+      "cost": 3000,
+      "effect": "GainStat",
+      "power": "1",
+      "affectedStat": "Cha",
+      "stackable": true
+    },
+    {
+      "id": "potion_restore_strength",
+      "name": "Potion of Restore Strength",
+      "pluralName": "Potions of Restore Strength",
+      "kind": "Potion",
+      "level": 5,
+      "rarity": 2,
+      "weightGrams": 80,
+      "cost": 150,
+      "effect": "RestoreStat",
+      "affectedStat": "Str",
+      "stackable": true,
+      "flavourGroup": 1
+    },
+    {
+      "id": "potion_restore_constitution",
+      "name": "Potion of Restore Constitution",
+      "pluralName": "Potions of Restore Constitution",
+      "kind": "Potion",
+      "level": 5,
+      "rarity": 2,
+      "weightGrams": 80,
+      "cost": 150,
+      "effect": "RestoreStat",
+      "affectedStat": "Con",
+      "stackable": true,
+      "flavourGroup": 1
+    },
+    {
+      "id": "potion_poison",
+      "name": "Potion of Poison",
+      "pluralName": "Potions of Poison",
+      "kind": "Potion",
+      "level": 1,
+      "weightGrams": 80,
+      "effect": "Poison",
+      "power": "2d6",
+      "stackable": true
+    },
+    {
+      "id": "potion_sleep",
+      "name": "Potion of Sleep",
+      "pluralName": "Potions of Sleep",
+      "kind": "Potion",
+      "level": 1,
+      "weightGrams": 80,
+      "effect": "Sleep",
+      "power": "1d4+4",
+      "stackable": true
+    },
+    {
+      "id": "potion_salt_water",
+      "name": "Potion of Salt Water",
+      "pluralName": "Potions of Salt Water",
+      "kind": "Potion",
+      "weightGrams": 80,
+      "effect": "SaltWater",
+      "stackable": true
+    },
+    {
+      "id": "potion_confusion",
+      "name": "Potion of Confusion",
+      "pluralName": "Potions of Confusion",
+      "kind": "Potion",
+      "level": 3,
+      "weightGrams": 80,
+      "effect": "Confusion",
+      "power": "1d10+10",
+      "stackable": true
+    },
+    {
+      "id": "potion_blindness",
+      "name": "Potion of Blindness",
+      "pluralName": "Potions of Blindness",
+      "kind": "Potion",
+      "level": 3,
+      "weightGrams": 80,
+      "effect": "Blindness",
+      "power": "1d50+50",
+      "stackable": true
+    },
+    {
+      "id": "scroll_light",
+      "name": "Scroll of Light",
+      "pluralName": "Scrolls of Light",
+      "kind": "Scroll",
+      "weightGrams": 15,
+      "cost": 15,
+      "effect": "Light",
+      "stackable": true
+    },
+    {
+      "id": "scroll_identify",
+      "name": "Scroll of Identify",
+      "pluralName": "Scrolls of Identify",
+      "kind": "Scroll",
+      "level": 1,
+      "weightGrams": 15,
+      "cost": 50,
+      "effect": "Identify",
+      "stackable": true
+    },
+    {
+      "id": "scroll_bless",
+      "name": "Scroll of Blessing",
+      "pluralName": "Scrolls of Blessing",
+      "kind": "Scroll",
+      "level": 2,
+      "weightGrams": 15,
+      "cost": 30,
+      "effect": "Bless",
+      "power": "1d12+6",
+      "stackable": true
+    },
+    {
+      "id": "scroll_misty_step",
+      "name": "Scroll of Misty Step",
+      "pluralName": "Scrolls of Misty Step",
+      "kind": "Scroll",
+      "level": 2,
+      "weightGrams": 15,
+      "cost": 40,
+      "effect": "ShortTeleport",
+      "stackable": true
+    },
+    {
+      "id": "scroll_detect_creatures",
+      "name": "Scroll of Detect Creatures",
+      "pluralName": "Scrolls of Detect Creatures",
+      "kind": "Scroll",
+      "level": 3,
+      "weightGrams": 15,
+      "cost": 40,
+      "effect": "DetectMonsters",
+      "stackable": true
+    },
+    {
+      "id": "scroll_escape",
+      "name": "Scroll of Escape",
+      "pluralName": "Scrolls of Escape",
+      "kind": "Scroll",
+      "level": 5,
+      "rarity": 2,
+      "weightGrams": 15,
+      "cost": 150,
+      "effect": "Escape",
+      "stackable": true
+    },
+    {
+      "id": "scroll_enchant_weapon",
+      "name": "Scroll of Enchant Weapon",
+      "pluralName": "Scrolls of Enchant Weapon",
+      "kind": "Scroll",
+      "level": 6,
+      "rarity": 2,
+      "weightGrams": 15,
+      "cost": 125,
+      "effect": "EnchantWeapon",
+      "stackable": true
+    },
+    {
+      "id": "scroll_enchant_armour",
+      "name": "Scroll of Enchant Armour",
+      "pluralName": "Scrolls of Enchant Armour",
+      "kind": "Scroll",
+      "level": 6,
+      "rarity": 2,
+      "weightGrams": 15,
+      "cost": 125,
+      "effect": "EnchantArmour",
+      "stackable": true
+    },
+    {
+      "id": "scroll_magic_mapping",
+      "name": "Scroll of Magic Mapping",
+      "pluralName": "Scrolls of Magic Mapping",
+      "kind": "Scroll",
+      "level": 8,
+      "rarity": 2,
+      "weightGrams": 15,
+      "cost": 150,
+      "effect": "MagicMapping",
+      "stackable": true
+    },
+    {
+      "id": "scroll_teleport",
+      "name": "Scroll of Teleportation",
+      "pluralName": "Scrolls of Teleportation",
+      "kind": "Scroll",
+      "level": 10,
+      "rarity": 2,
+      "weightGrams": 15,
+      "cost": 200,
+      "effect": "Teleport",
+      "stackable": true
+    },
+    {
+      "id": "scroll_remove_curse",
+      "name": "Scroll of Remove Curse",
+      "pluralName": "Scrolls of Remove Curse",
+      "kind": "Scroll",
+      "level": 10,
+      "rarity": 2,
+      "weightGrams": 15,
+      "cost": 250,
+      "effect": "RemoveCurse",
+      "stackable": true
+    },
+    {
+      "id": "scroll_protection_evil",
+      "name": "Scroll of Protection from Evil",
+      "pluralName": "Scrolls of Protection from Evil",
+      "kind": "Scroll",
+      "level": 15,
+      "rarity": 3,
+      "weightGrams": 15,
+      "cost": 400,
+      "effect": "ProtectionFromEvil",
+      "power": "1d25+30",
+      "stackable": true
+    },
+    {
+      "id": "scroll_alarm",
+      "name": "Scroll of Alarm",
+      "pluralName": "Scrolls of Alarm",
+      "kind": "Scroll",
+      "level": 3,
+      "weightGrams": 15,
+      "effect": "Aggravate",
+      "stackable": true
+    },
+    {
+      "id": "scroll_summon_monster",
+      "name": "Scroll of Summon Monster",
+      "pluralName": "Scrolls of Summon Monster",
+      "kind": "Scroll",
+      "level": 5,
+      "weightGrams": 15,
+      "effect": "SummonMonster",
+      "stackable": true
+    },
+    {
+      "id": "scroll_travel_1km",
+      "name": "Scroll of Travel (1 km)",
+      "pluralName": "Scrolls of Travel (1 km)",
+      "kind": "Scroll",
+      "level": 2,
+      "rarity": 4,
+      "weightGrams": 15,
+      "cost": 150,
+      "effect": "FarTravel",
+      "power": "1000",
+      "stackable": true
+    },
+    {
+      "id": "scroll_travel_3km",
+      "name": "Scroll of Travel (3 km)",
+      "pluralName": "Scrolls of Travel (3 km)",
+      "kind": "Scroll",
+      "level": 8,
+      "rarity": 5,
+      "weightGrams": 15,
+      "cost": 400,
+      "effect": "FarTravel",
+      "power": "3000",
+      "stackable": true
+    },
+    {
+      "id": "scroll_travel_10km",
+      "name": "Scroll of Travel (10 km)",
+      "pluralName": "Scrolls of Travel (10 km)",
+      "kind": "Scroll",
+      "level": 15,
+      "rarity": 6,
+      "weightGrams": 15,
+      "cost": 1200,
+      "effect": "FarTravel",
+      "power": "10000",
+      "stackable": true
+    },
+    {
+      "id": "scroll_travel_30km",
+      "name": "Scroll of Travel (30 km)",
+      "pluralName": "Scrolls of Travel (30 km)",
+      "kind": "Scroll",
+      "level": 25,
+      "rarity": 8,
+      "weightGrams": 15,
+      "cost": 3500,
+      "effect": "FarTravel",
+      "power": "30000",
+      "stackable": true
+    },
+    {
+      "id": "scroll_hearthcall",
+      "name": "Scroll of Hearthcall",
+      "pluralName": "Scrolls of Hearthcall",
+      "kind": "Scroll",
+      "level": 10,
+      "rarity": 6,
+      "weightGrams": 15,
+      "cost": 800,
+      "effect": "Hearthcall",
+      "stackable": true
+    },
+    {
+      "id": "scroll_lure",
+      "name": "Scroll of Lure",
+      "pluralName": "Scrolls of Lure",
+      "kind": "Scroll",
+      "level": 1,
+      "weightGrams": 15,
+      "cost": 25,
+      "effect": "Lure",
+      "stackable": true,
+      "flavourGroup": 1
+    },
+    {
+      "id": "scroll_locate",
+      "name": "Scroll of Locate",
+      "pluralName": "Scrolls of Locate",
+      "kind": "Scroll",
+      "level": 2,
+      "weightGrams": 15,
+      "cost": 35,
+      "effect": "Locate",
+      "stackable": true,
+      "flavourGroup": 1
+    },
+    {
+      "id": "scroll_shield",
+      "name": "Scroll of Shielding",
+      "pluralName": "Scrolls of Shielding",
+      "kind": "Scroll",
+      "level": 3,
+      "weightGrams": 15,
+      "cost": 45,
+      "effect": "Shield",
+      "power": "1d6+8",
+      "stackable": true,
+      "flavourGroup": 1
+    },
+    {
+      "id": "scroll_find_traps",
+      "name": "Scroll of Trap Finding",
+      "pluralName": "Scrolls of Trap Finding",
+      "kind": "Scroll",
+      "level": 3,
+      "weightGrams": 15,
+      "cost": 40,
+      "effect": "FindTraps",
+      "stackable": true,
+      "flavourGroup": 1
+    },
+    {
+      "id": "scroll_pass_without_trace",
+      "name": "Scroll of Pass Without Trace",
+      "pluralName": "Scrolls of Pass Without Trace",
+      "kind": "Scroll",
+      "level": 3,
+      "rarity": 2,
+      "weightGrams": 15,
+      "cost": 60,
+      "effect": "PassWithoutTrace",
+      "power": "30",
+      "stackable": true,
+      "flavourGroup": 1
+    },
+    {
+      "id": "scroll_find_treasure",
+      "name": "Scroll of Treasure Finding",
+      "pluralName": "Scrolls of Treasure Finding",
+      "kind": "Scroll",
+      "level": 4,
+      "rarity": 2,
+      "weightGrams": 15,
+      "cost": 80,
+      "effect": "FindTreasure",
+      "power": "30",
+      "stackable": true,
+      "flavourGroup": 1
+    },
+    {
+      "id": "scroll_sanctuary",
+      "name": "Scroll of Sanctuary",
+      "pluralName": "Scrolls of Sanctuary",
+      "kind": "Scroll",
+      "level": 5,
+      "rarity": 2,
+      "weightGrams": 15,
+      "cost": 70,
+      "effect": "Sanctuary",
+      "power": "1d4+4",
+      "stackable": true,
+      "flavourGroup": 1
+    },
+    {
+      "id": "scroll_recharging",
+      "name": "Scroll of Recharging",
+      "pluralName": "Scrolls of Recharging",
+      "kind": "Scroll",
+      "level": 8,
+      "rarity": 2,
+      "weightGrams": 15,
+      "cost": 200,
+      "effect": "Recharge",
+      "power": "2d4",
+      "stackable": true,
+      "flavourGroup": 1
+    },
+    {
+      "id": "waystone_shard",
+      "name": "Waystone Shard",
+      "pluralName": "Waystone Shards",
+      "kind": "Token",
+      "level": 5,
+      "rarity": 6,
+      "weightGrams": 100,
+      "cost": 600,
+      "effect": "Waystone",
+      "stackable": true
+    },
+    {
+      "id": "wand_magic_missiles",
+      "name": "Wand of Magic Missiles",
+      "kind": "Wand",
+      "level": 2,
+      "weightGrams": 250,
+      "cost": 200,
+      "effect": "MagicMissile",
+      "power": "3d4",
+      "charges": "1d10+6"
+    },
+    {
+      "id": "wand_sleep",
+      "name": "Wand of Sleep",
+      "kind": "Wand",
+      "level": 4,
+      "weightGrams": 250,
+      "cost": 150,
+      "effect": "SleepMonster",
+      "charges": "1d8+6"
+    },
+    {
+      "id": "wand_stinking_cloud",
+      "name": "Wand of Stinking Cloud",
+      "kind": "Wand",
+      "level": 5,
+      "weightGrams": 250,
+      "cost": 250,
+      "effect": "StinkingCloud",
+      "power": "12",
+      "charges": "1d8+6"
+    },
+    {
+      "id": "wand_fear",
+      "name": "Wand of Fear",
+      "kind": "Wand",
+      "level": 6,
+      "weightGrams": 250,
+      "cost": 200,
+      "effect": "ScareMonster",
+      "charges": "1d8+4"
+    },
+    {
+      "id": "wand_slow",
+      "name": "Wand of Slowness",
+      "kind": "Wand",
+      "level": 8,
+      "weightGrams": 250,
+      "cost": 250,
+      "effect": "SlowMonster",
+      "charges": "1d8+4"
+    },
+    {
+      "id": "wand_lightning_bolts",
+      "name": "Wand of Lightning Bolts",
+      "kind": "Wand",
+      "level": 15,
+      "rarity": 2,
+      "weightGrams": 250,
+      "cost": 800,
+      "effect": "LightningBolt",
+      "power": "6d6",
+      "charges": "1d8+4"
+    },
+    {
+      "id": "wand_frost",
+      "name": "Wand of Frost",
+      "kind": "Wand",
+      "level": 20,
+      "rarity": 2,
+      "weightGrams": 250,
+      "cost": 1000,
+      "effect": "FrostBolt",
+      "power": "6d8",
+      "charges": "1d6+4"
+    },
+    {
+      "id": "wand_fireballs",
+      "name": "Wand of Fireballs",
+      "kind": "Wand",
+      "level": 30,
+      "rarity": 3,
+      "weightGrams": 250,
+      "cost": 2500,
+      "effect": "Fireball",
+      "power": "8d6",
+      "charges": "1d6+3"
+    },
+    {
+      "id": "staff_light",
+      "name": "Staff of Light",
+      "kind": "Staff",
+      "level": 2,
+      "weightGrams": 1700,
+      "cost": 250,
+      "effect": "Light",
+      "charges": "2d10+10"
+    },
+    {
+      "id": "staff_detect_evil",
+      "name": "Staff of Detect Evil",
+      "kind": "Staff",
+      "level": 5,
+      "weightGrams": 1700,
+      "cost": 350,
+      "effect": "DetectEvil",
+      "charges": "2d10+10"
+    },
+    {
+      "id": "staff_sleep_monsters",
+      "name": "Staff of Sleep Monsters",
+      "kind": "Staff",
+      "level": 10,
+      "rarity": 2,
+      "weightGrams": 1700,
+      "cost": 700,
+      "effect": "SleepMonsters",
+      "charges": "1d10+5"
+    },
+    {
+      "id": "staff_healing",
+      "name": "Staff of Healing",
+      "kind": "Staff",
+      "level": 15,
+      "rarity": 3,
+      "weightGrams": 1700,
+      "cost": 1500,
+      "effect": "Heal",
+      "power": "4d8+8",
+      "charges": "1d6+4"
+    },
+    {
+      "id": "staff_teleport",
+      "name": "Staff of Teleportation",
+      "kind": "Staff",
+      "level": 20,
+      "rarity": 3,
+      "weightGrams": 1700,
+      "cost": 2000,
+      "effect": "Teleport",
+      "charges": "1d6+4"
+    },
+    {
+      "id": "book_arcane_1",
+      "name": "Apprentice's Spellbook",
+      "pluralName": "Apprentice's Spellbook",
+      "kind": "Book",
+      "rarity": 3,
+      "weightGrams": 200,
+      "cost": 25
+    },
+    {
+      "id": "book_arcane_2",
+      "name": "Conjurer's Tome",
+      "pluralName": "Conjurer's Tome",
+      "kind": "Book",
+      "level": 10,
+      "rarity": 3,
+      "weightGrams": 200,
+      "cost": 300
+    },
+    {
+      "id": "book_arcane_3",
+      "name": "Grimoire of Power",
+      "pluralName": "Grimoire of Power",
+      "kind": "Book",
+      "level": 25,
+      "rarity": 4,
+      "weightGrams": 200,
+      "cost": 2500
+    },
+    {
+      "id": "book_arcane_4",
+      "name": "Tome of the Archmage",
+      "pluralName": "Tome of the Archmage",
+      "kind": "Book",
+      "level": 38,
+      "rarity": 6,
+      "weightGrams": 200,
+      "cost": 12000
+    },
+    {
+      "id": "book_prayers_1",
+      "name": "Book of Minor Prayers",
+      "pluralName": "Book of Minor Prayers",
+      "kind": "Book",
+      "rarity": 3,
+      "weightGrams": 200,
+      "cost": 25
+    },
+    {
+      "id": "book_prayers_2",
+      "name": "Book of Major Prayers",
+      "pluralName": "Book of Major Prayers",
+      "kind": "Book",
+      "level": 10,
+      "rarity": 3,
+      "weightGrams": 200,
+      "cost": 300
+    },
+    {
+      "id": "book_prayers_3",
+      "name": "Litany of the Faithful",
+      "pluralName": "Litany of the Faithful",
+      "kind": "Book",
+      "level": 25,
+      "rarity": 4,
+      "weightGrams": 200,
+      "cost": 2500
+    },
+    {
+      "id": "book_prayers_4",
+      "name": "Holy Canticles",
+      "pluralName": "Holy Canticles",
+      "kind": "Book",
+      "level": 38,
+      "rarity": 6,
+      "weightGrams": 200,
+      "cost": 12000
+    }
+  ],
+  "egos": [
+    {
+      "id": "ego_flame",
+      "name": "of Flame",
+      "appliesTo": ["Blade", "Blunt", "Polearm"],
+      "level": 10,
+      "rarity": 3,
+      "brand": "Fire",
+      "grants": "ResistFire",
+      "lightRadius": 1,
+      "description": "Wreathed in fire: triple damage to anything not immune to fire."
+    },
+    {
+      "id": "ego_frost",
+      "name": "of Frost",
+      "appliesTo": ["Blade", "Blunt", "Polearm"],
+      "level": 10,
+      "rarity": 3,
+      "brand": "Cold",
+      "grants": "ResistCold",
+      "description": "Rimed with ice: triple damage to anything not immune to cold."
+    },
+    {
+      "id": "ego_venom",
+      "name": "of Venom",
+      "appliesTo": ["Blade", "Blunt", "Polearm"],
+      "level": 12,
+      "rarity": 3,
+      "brand": "Poison",
+      "grants": "ResistPoison",
+      "description": "Dripping poison: triple damage to anything not immune to poison."
+    },
+    {
+      "id": "ego_thunder",
+      "name": "of Thunder",
+      "appliesTo": ["Blade", "Blunt", "Polearm"],
+      "level": 14,
+      "rarity": 4,
+      "brand": "Lightning",
+      "grants": "ResistLightning",
+      "description": "Crackling with lightning: triple damage to anything not immune to it."
+    },
+    {
+      "id": "ego_corrosion",
+      "name": "of Corrosion",
+      "appliesTo": ["Blade", "Blunt", "Polearm"],
+      "level": 16,
+      "rarity": 4,
+      "brand": "Acid",
+      "grants": "ResistAcid",
+      "description": "Hissing with acid: triple damage to anything not immune to acid."
+    },
+    {
+      "id": "ego_slay_animal",
+      "name": "of Beast Slaying",
+      "appliesTo": ["Blade", "Blunt", "Polearm"],
+      "level": 5,
+      "rarity": 2,
+      "slays": "Animal",
+      "description": "Double damage to animals."
+    },
+    {
+      "id": "ego_slay_evil",
+      "name": "of Smiting",
+      "appliesTo": ["Blade", "Blunt", "Polearm"],
+      "level": 8,
+      "rarity": 3,
+      "slays": "Evil",
+      "stats": { "wis": 1 },
+      "description": "Double damage to evil creatures."
+    },
+    {
+      "id": "ego_slay_undead",
+      "name": "of Disruption",
+      "appliesTo": ["Blade", "Blunt", "Polearm"],
+      "level": 8,
+      "rarity": 3,
+      "slays": "Undead",
+      "grants": "SeeInvisible",
+      "description": "Triple damage to the undead."
+    },
+    {
+      "id": "ego_slay_giant",
+      "name": "of Giant Slaying",
+      "appliesTo": ["Blade", "Blunt", "Polearm"],
+      "level": 14,
+      "rarity": 4,
+      "slays": "Giant",
+      "description": "Triple damage to giants, ogres and trolls."
+    },
+    {
+      "id": "ego_slay_dragon",
+      "name": "of Dragon Slaying",
+      "appliesTo": ["Blade", "Blunt", "Polearm"],
+      "level": 18,
+      "rarity": 5,
+      "slays": "Dragon",
+      "description": "Triple damage to dragons and wyverns."
+    },
+    {
+      "id": "ego_slay_demon",
+      "name": "of Fiend Slaying",
+      "appliesTo": ["Blade", "Blunt", "Polearm"],
+      "level": 18,
+      "rarity": 5,
+      "slays": "Demon",
+      "grants": "ResistFire",
+      "description": "Triple damage to demons."
+    },
+    {
+      "id": "ego_vorpal",
+      "name": "(Vorpal)",
+      "appliesTo": ["Blade", "Blunt", "Polearm"],
+      "level": 20,
+      "rarity": 5,
+      "toDamage": 3,
+      "criticalOneIn": 6,
+      "description": "Keen beyond belief: frequent great hits."
+    },
+    {
+      "id": "ego_swiftness",
+      "name": "of Swiftness",
+      "appliesTo": ["Blade", "Blunt", "Polearm"],
+      "level": 22,
+      "rarity": 6,
+      "extraBlows": 1,
+      "description": "Light as a feather: an extra blow each round."
+    },
+    {
+      "id": "ego_defender",
+      "name": "(Defender)",
+      "appliesTo": ["Blade", "Blunt", "Polearm"],
+      "level": 28,
+      "rarity": 8,
+      "toArmour": 10,
+      "grants": "ResistFire, ResistCold, FreeAction, SeeInvisible, Regeneration",
+      "description": "Guards its wielder: armour, free action, see invisible, regeneration, fire and cold resistance."
+    },
+    {
+      "id": "ego_holy_avenger",
+      "name": "(Holy Avenger)",
+      "appliesTo": ["Blade", "Blunt", "Polearm"],
+      "level": 28,
+      "rarity": 8,
+      "toHit": 3,
+      "toDamage": 3,
+      "toArmour": 5,
+      "slays": "Evil, Undead, Demon",
+      "grants": "SeeInvisible, ResistFear",
+      "stats": { "wis": 2 },
+      "description": "A paladin's dream: slays evil, undead and demons."
+    },
+    {
+      "id": "ego_magi",
+      "name": "of the Magi",
+      "appliesTo": ["Blade", "Blunt", "Polearm"],
+      "level": 10,
+      "rarity": 3,
+      "stats": { "int": 2 },
+      "mana": 10,
+      "onlyOn": ["dagger", "quarterstaff"],
+      "description": "Hums with arcane power: +2 INT and 10 more mana."
+    },
+    {
+      "id": "ego_spell_focus",
+      "name": "of Spell Focus",
+      "appliesTo": ["Blade", "Blunt", "Polearm"],
+      "level": 14,
+      "rarity": 4,
+      "spellFailure": 8,
+      "spellDice": 2,
+      "onlyOn": ["dagger", "quarterstaff", "mace"],
+      "description": "Gathers the caster's will: spells fail 8% less often and gain 2 extra dice."
+    },
+    {
+      "id": "ego_faithful",
+      "name": "of the Faithful",
+      "appliesTo": ["Blade", "Blunt", "Polearm"],
+      "level": 10,
+      "rarity": 3,
+      "stats": { "wis": 2 },
+      "mana": 10,
+      "onlyOn": ["mace", "quarterstaff"],
+      "description": "Warm with devotion: +2 WIS and 10 more mana."
+    },
+    {
+      "id": "ego_power",
+      "name": "of Power",
+      "appliesTo": ["Launcher"],
+      "level": 15,
+      "rarity": 4,
+      "toDamage": 3,
+      "extraMultiplier": 1,
+      "description": "Hits harder: +1 to the damage multiplier."
+    },
+    {
+      "id": "ego_res_fire",
+      "name": "of Fire Resistance",
+      "appliesTo": ["BodyArmour", "Shield"],
+      "level": 8,
+      "rarity": 2,
+      "grants": "ResistFire"
+    },
+    {
+      "id": "ego_res_cold",
+      "name": "of Cold Resistance",
+      "appliesTo": ["BodyArmour", "Shield"],
+      "level": 8,
+      "rarity": 2,
+      "grants": "ResistCold"
+    },
+    {
+      "id": "ego_res_lightning",
+      "name": "of Lightning Resistance",
+      "appliesTo": ["BodyArmour", "Shield"],
+      "level": 12,
+      "rarity": 3,
+      "grants": "ResistLightning"
+    },
+    {
+      "id": "ego_res_acid",
+      "name": "of Acid Resistance",
+      "appliesTo": ["BodyArmour", "Shield"],
+      "level": 12,
+      "rarity": 3,
+      "grants": "ResistAcid"
+    },
+    {
+      "id": "ego_resistance",
+      "name": "of Resistance",
+      "appliesTo": ["BodyArmour", "Shield"],
+      "level": 22,
+      "rarity": 5,
+      "grants": "ResistFire, ResistCold, ResistLightning, ResistAcid",
+      "description": "Resists fire, cold, lightning and acid."
+    },
+    {
+      "id": "ego_elvenkind",
+      "name": "of Elvenkind",
+      "appliesTo": ["BodyArmour", "Cloak", "Boots"],
+      "level": 12,
+      "rarity": 4,
+      "toArmour": 4,
+      "grants": "Stealth",
+      "description": "Elven work: the wearer moves unseen and unheard."
+    },
+    {
+      "id": "ego_protection",
+      "name": "of Protection",
+      "appliesTo": ["Cloak", "Shield"],
+      "level": 6,
+      "rarity": 2,
+      "toArmour": 6
+    },
+    {
+      "id": "ego_intellect",
+      "name": "of Intellect",
+      "appliesTo": ["Helm"],
+      "level": 12,
+      "rarity": 3,
+      "stats": { "int": 2 }
+    },
+    {
+      "id": "ego_wisdom",
+      "name": "of Wisdom",
+      "appliesTo": ["Helm"],
+      "level": 12,
+      "rarity": 3,
+      "stats": { "wis": 2 }
+    },
+    {
+      "id": "ego_seeing",
+      "name": "of Seeing",
+      "appliesTo": ["Helm"],
+      "level": 15,
+      "rarity": 4,
+      "grants": "SeeInvisible, ResistBlindness"
+    },
+    {
+      "id": "ego_clarity",
+      "name": "of Clarity",
+      "appliesTo": ["Helm"],
+      "level": 18,
+      "rarity": 4,
+      "grants": "ResistConfusion, ResistFear"
+    },
+    {
+      "id": "ego_free_action",
+      "name": "of Free Action",
+      "appliesTo": ["Gloves", "Boots"],
+      "level": 10,
+      "rarity": 3,
+      "grants": "FreeAction"
+    },
+    {
+      "id": "ego_ogre_power",
+      "name": "of Ogre Power",
+      "appliesTo": ["Gloves"],
+      "level": 15,
+      "rarity": 4,
+      "stats": { "str": 3 },
+      "description": "Gauntlets that give their wearer an ogre's strength."
+    },
+    {
+      "id": "ego_slaying",
+      "name": "of Slaying",
+      "appliesTo": ["Gloves"],
+      "level": 12,
+      "rarity": 3,
+      "toHit": 4,
+      "toDamage": 4
+    },
+    {
+      "id": "ego_speed",
+      "name": "of Speed",
+      "appliesTo": ["Boots"],
+      "level": 30,
+      "rarity": 12,
+      "speed": 10,
+      "description": "Legendary swiftness: the wearer acts twice as often."
+    }
+  ],
+  "artifacts": [
+    {
+      "id": "art_flamebrand",
+      "name": "Flamebrand",
+      "kind": "Artifact",
+      "baseItemId": "longsword",
+      "level": 25,
+      "rarity": 2,
+      "toHit": 10,
+      "toDamage": 12,
+      "brand": "Fire",
+      "grants": "ResistFire",
+      "lightRadius": 1,
+      "description": "Forged in a dragon's gullet; it never cools."
+    },
+    {
+      "id": "art_winterfang",
+      "name": "Winterfang",
+      "kind": "Artifact",
+      "baseItemId": "battleaxe",
+      "level": 26,
+      "rarity": 2,
+      "toHit": 10,
+      "toDamage": 12,
+      "brand": "Cold",
+      "grants": "ResistCold",
+      "description": "An axe of the frost giants' kings."
+    },
+    {
+      "id": "art_stormcaller",
+      "name": "Stormcaller",
+      "kind": "Artifact",
+      "baseItemId": "warhammer",
+      "level": 28,
+      "rarity": 2,
+      "toHit": 10,
+      "toDamage": 12,
+      "brand": "Lightning",
+      "grants": "ResistLightning",
+      "stats": { "str": 2 },
+      "description": "Thunder rolls where it strikes."
+    },
+    {
+      "id": "art_venomspite",
+      "name": "Venomspite",
+      "kind": "Artifact",
+      "baseItemId": "rapier",
+      "level": 25,
+      "rarity": 2,
+      "toHit": 12,
+      "toDamage": 10,
+      "brand": "Poison",
+      "grants": "ResistPoison",
+      "stats": { "dex": 2 },
+      "extraBlows": 1,
+      "description": "The assassin's last gift."
+    },
+    {
+      "id": "art_corrosa",
+      "name": "Corrosa",
+      "kind": "Artifact",
+      "baseItemId": "halberd",
+      "level": 27,
+      "rarity": 2,
+      "toHit": 10,
+      "toDamage": 12,
+      "brand": "Acid",
+      "grants": "ResistAcid",
+      "description": "Its edge eats through iron and bone alike."
+    },
+    {
+      "id": "art_beastfang",
+      "name": "Beastfang",
+      "kind": "Artifact",
+      "baseItemId": "spear",
+      "level": 25,
+      "rarity": 2,
+      "toHit": 10,
+      "toDamage": 10,
+      "slays": "Animal",
+      "grants": "Stealth",
+      "speed": 3,
+      "description": "A hunter's spear that knows every trail."
+    },
+    {
+      "id": "art_dawnbringer",
+      "name": "Dawnbringer",
+      "kind": "Artifact",
+      "baseItemId": "morningstar",
+      "level": 30,
+      "rarity": 3,
+      "toHit": 12,
+      "toDamage": 14,
+      "slays": "Evil, Undead",
+      "grants": "SeeInvisible, HoldLife",
+      "lightRadius": 2,
+      "description": "The dead flee its light; it guards its bearer's very life."
+    },
+    {
+      "id": "art_titansbane",
+      "name": "Titansbane",
+      "kind": "Artifact",
+      "baseItemId": "maul",
+      "level": 32,
+      "rarity": 3,
+      "toHit": 12,
+      "toDamage": 15,
+      "slays": "Giant",
+      "stats": { "str": 3, "con": 3 },
+      "description": "Made to fell the hill-born."
+    },
+    {
+      "id": "art_wyrmsbane",
+      "name": "Wyrmsbane",
+      "kind": "Artifact",
+      "baseItemId": "greatsword",
+      "level": 34,
+      "rarity": 3,
+      "toHit": 14,
+      "toDamage": 16,
+      "slays": "Dragon",
+      "grants": "ResistFire, ResistCold, ResistLightning, ResistAcid",
+      "description": "Quenched in the blood of the first dragon."
+    },
+    {
+      "id": "art_hellreaver",
+      "name": "Hellreaver",
+      "kind": "Artifact",
+      "baseItemId": "glaive",
+      "level": 36,
+      "rarity": 3,
+      "toHit": 14,
+      "toDamage": 16,
+      "slays": "Demon",
+      "grants": "ResistFire, ResistFear",
+      "description": "Demons know its name and fear it."
+    },
+    {
+      "id": "art_sunsworn",
+      "name": "Sunsworn",
+      "kind": "Artifact",
+      "baseItemId": "longsword",
+      "level": 40,
+      "rarity": 4,
+      "toHit": 18,
+      "toDamage": 18,
+      "toArmour": 10,
+      "slays": "Evil, Undead, Demon",
+      "grants": "FreeAction, SeeInvisible, HoldLife, ResistFear",
+      "stats": { "wis": 3 },
+      "extraBlows": 1,
+      "description": "The holy avenger of legend."
+    },
+    {
+      "id": "art_oathbow",
+      "name": "Oathbow",
+      "kind": "Artifact",
+      "baseItemId": "longbow",
+      "level": 30,
+      "rarity": 3,
+      "toHit": 15,
+      "toDamage": 20,
+      "grants": "SeeInvisible",
+      "extraMultiplier": 2,
+      "description": "Its arrows never miss their sworn foe."
+    },
+    {
+      "id": "art_dragonscale",
+      "name": "the Dragonscale Aegis",
+      "kind": "Artifact",
+      "baseItemId": "plate_armour",
+      "level": 35,
+      "rarity": 3,
+      "toArmour": 20,
+      "grants": "ResistFire, ResistCold, ResistLightning, ResistAcid",
+      "description": "Scales of the four great wyrms: fire, frost, storm and acid."
+    },
+    {
+      "id": "art_serpentskin",
+      "name": "Serpentskin",
+      "kind": "Artifact",
+      "baseItemId": "studded_leather",
+      "level": 25,
+      "rarity": 2,
+      "toArmour": 12,
+      "grants": "ResistPoison, Stealth",
+      "description": "Supple as a snake, and as immune to venom."
+    },
+    {
+      "id": "art_crown_clarity",
+      "name": "the Crown of Clarity",
+      "kind": "Artifact",
+      "baseItemId": "great_helm",
+      "level": 28,
+      "rarity": 2,
+      "toArmour": 8,
+      "grants": "SeeInvisible, ResistConfusion, ResistBlindness",
+      "stats": { "int": 3, "wis": 3 },
+      "description": "Nothing clouds the mind or eyes of its wearer."
+    },
+    {
+      "id": "art_bulwark",
+      "name": "the Warden's Bulwark",
+      "kind": "Artifact",
+      "baseItemId": "tower_shield",
+      "level": 30,
+      "rarity": 2,
+      "toArmour": 15,
+      "grants": "ResistFire, ResistCold, FreeAction, ResistFear",
+      "description": "Carried by the last warden of the pass."
+    },
+    {
+      "id": "art_mantle_shadows",
+      "name": "the Mantle of Shadows",
+      "kind": "Artifact",
+      "baseItemId": "fur_cloak",
+      "level": 25,
+      "rarity": 2,
+      "toArmour": 10,
+      "grants": "ResistAcid, SeeInvisible, Stealth",
+      "description": "Woven from dusk itself."
+    },
+    {
+      "id": "art_titan_gauntlets",
+      "name": "the Gauntlets of the Titan",
+      "kind": "Artifact",
+      "baseItemId": "gauntlets",
+      "level": 27,
+      "rarity": 2,
+      "toHit": 5,
+      "toDamage": 5,
+      "toArmour": 5,
+      "grants": "FreeAction",
+      "stats": { "str": 4 },
+      "description": "Their grip could crush stone."
+    },
+    {
+      "id": "art_seven_league",
+      "name": "the Seven-League Boots",
+      "kind": "Artifact",
+      "baseItemId": "iron_boots",
+      "level": 38,
+      "rarity": 4,
+      "toArmour": 8,
+      "grants": "ResistLightning, FreeAction",
+      "speed": 10,
+      "description": "Each stride a league."
+    },
+    {
+      "id": "art_undying",
+      "name": "the Amulet of the Undying",
+      "kind": "Artifact",
+      "baseItemId": "amulet_health",
+      "level": 33,
+      "rarity": 3,
+      "grants": "Regeneration, HoldLife, SustainStats",
+      "stats": { "con": 2 },
+      "description": "Neither wight nor wraith can steal what it guards."
+    },
+    {
+      "id": "art_iron_will",
+      "name": "the Ring of Iron Will",
+      "kind": "Artifact",
+      "baseItemId": "ring_protection",
+      "level": 30,
+      "rarity": 3,
+      "toArmour": 8,
+      "grants": "FreeAction, ResistConfusion, ResistFear",
+      "description": "No terror, charm or spell can bend its wearer."
+    }
+  ],
+  "signatures": [
+    {
+      "id": "sig_warlord",
+      "name": "the Warlord's Crown",
+      "kind": "Artifact",
+      "baseItemId": "iron_helm",
+      "level": 5,
+      "toArmour": 4,
+      "grants": "ResistFear",
+      "stats": { "str": 2 },
+      "description": "Taken from a master of a keep; no soldier flinches under it."
+    },
+    {
+      "id": "sig_barrow_king",
+      "name": "the Barrow-King's Ring",
+      "kind": "Artifact",
+      "baseItemId": "ring_protection",
+      "level": 5,
+      "toArmour": 3,
+      "grants": "SeeInvisible, HoldLife",
+      "stats": { "con": 1 },
+      "description": "Cold as a grave; what it guards, no wight can drain."
+    },
+    {
+      "id": "sig_archmage",
+      "name": "the Archmage's Pendant",
+      "kind": "Artifact",
+      "baseItemId": "amulet_intellect",
+      "level": 5,
+      "grants": "ResistFire, ResistCold, ResistLightning",
+      "stats": { "int": 2 },
+      "description": "It remembers every spell cast in its tower."
+    },
+    {
+      "id": "sig_brood_mother",
+      "name": "the Brood-silk Cloak",
+      "kind": "Artifact",
+      "baseItemId": "cloak",
+      "level": 5,
+      "toArmour": 5,
+      "grants": "ResistPoison, Stealth",
+      "stats": { "dex": 2 },
+      "description": "Spun deep underground; nothing that crawls will notice you."
+    },
+    {
+      "id": "sig_storm_queen",
+      "name": "the Storm Queen's Talons",
+      "kind": "Artifact",
+      "baseItemId": "leather_gloves",
+      "level": 5,
+      "toHit": 3,
+      "toArmour": 3,
+      "grants": "ResistLightning, FreeAction",
+      "stats": { "dex": 2 },
+      "description": "They crackle when you close your fist."
+    },
+    {
+      "id": "sig_guardian",
+      "name": "the Guardian's Heartplate",
+      "kind": "Artifact",
+      "baseItemId": "breastplate",
+      "level": 5,
+      "toArmour": 8,
+      "grants": "ResistAcid, FreeAction",
+      "stats": { "con": 2 },
+      "description": "The core of a vault's warden, still faintly humming."
+    }
+  ],
+  "spells": [
+    {
+      "id": "magic_missile",
+      "name": "Magic Missile",
+      "bookId": "book_arcane_1",
+      "effect": "MagicMissile",
+      "power": "3d4",
+      "extraDieEvery": 3,
+      "classes": {
+        "Mage": { "level": 1, "mana": 1, "baseFail": 22 },
+        "Rogue": { "level": 5, "mana": 1, "baseFail": 32 }
+      }
+    },
+    {
+      "id": "detect_monsters",
+      "name": "Detect Monsters",
+      "bookId": "book_arcane_1",
+      "effect": "DetectMonsters",
+      "classes": {
+        "Mage": { "level": 2, "mana": 1, "baseFail": 23 },
+        "Ranger": { "level": 4, "mana": 1, "baseFail": 33 },
+        "Rogue": { "level": 7, "mana": 1, "baseFail": 33 }
+      }
+    },
+    {
+      "id": "misty_step",
+      "name": "Misty Step",
+      "bookId": "book_arcane_1",
+      "effect": "ShortTeleport",
+      "classes": {
+        "Mage": { "level": 3, "mana": 2, "baseFail": 24 },
+        "Rogue": { "level": 8, "mana": 2, "baseFail": 34 }
+      }
+    },
+    {
+      "id": "light",
+      "name": "Light",
+      "bookId": "book_arcane_1",
+      "effect": "Light",
+      "classes": {
+        "Mage": { "level": 5, "mana": 2, "baseFail": 26 },
+        "Ranger": { "level": 8, "mana": 2, "baseFail": 36 },
+        "Rogue": { "level": 11, "mana": 2, "baseFail": 36 }
+      }
+    },
+    {
+      "id": "sleep",
+      "name": "Sleep",
+      "bookId": "book_arcane_1",
+      "effect": "SleepMonster",
+      "classes": {
+        "Mage": { "level": 5, "mana": 3, "baseFail": 27 },
+        "Rogue": { "level": 11, "mana": 3, "baseFail": 37 }
+      }
+    },
+    {
+      "id": "stinking_cloud",
+      "name": "Stinking Cloud",
+      "bookId": "book_arcane_1",
+      "effect": "StinkingCloud",
+      "power": "2d6+6",
+      "extraDieEvery": 3,
+      "classes": {
+        "Mage": { "level": 7, "mana": 4, "baseFail": 27 },
+        "Rogue": { "level": 14, "mana": 4, "baseFail": 37 }
+      }
+    },
+    {
+      "id": "identify",
+      "name": "Identify",
+      "bookId": "book_arcane_1",
+      "effect": "Identify",
+      "classes": {
+        "Mage": { "level": 9, "mana": 5, "baseFail": 30 },
+        "Rogue": { "level": 17, "mana": 5, "baseFail": 40 }
+      }
+    },
+    {
+      "id": "lure",
+      "name": "Lure",
+      "bookId": "book_arcane_1",
+      "effect": "Lure",
+      "classes": {
+        "Mage": { "level": 3, "mana": 2, "baseFail": 24 },
+        "Ranger": { "level": 5, "mana": 2, "baseFail": 34 },
+        "Rogue": { "level": 8, "mana": 2, "baseFail": 34 }
+      }
+    },
+    {
+      "id": "shield",
+      "name": "Shield",
+      "bookId": "book_arcane_1",
+      "effect": "Shield",
+      "power": "1d6+6",
+      "classes": {
+        "Mage": { "level": 4, "mana": 2, "baseFail": 25 },
+        "Rogue": { "level": 10, "mana": 2, "baseFail": 35 }
+      }
+    },
+    {
+      "id": "find_traps",
+      "name": "Find Traps",
+      "bookId": "book_arcane_1",
+      "effect": "FindTraps",
+      "classes": {
+        "Mage": { "level": 6, "mana": 3, "baseFail": 27 },
+        "Ranger": { "level": 9, "mana": 3, "baseFail": 37 },
+        "Rogue": { "level": 13, "mana": 3, "baseFail": 37 }
+      }
+    },
+    {
+      "id": "pass_without_trace",
+      "name": "Pass Without Trace",
+      "bookId": "book_arcane_1",
+      "effect": "PassWithoutTrace",
+      "power": "30",
+      "classes": {
+        "Mage": { "level": 7, "mana": 4, "baseFail": 28 },
+        "Ranger": { "level": 10, "mana": 4, "baseFail": 38 },
+        "Rogue": { "level": 14, "mana": 4, "baseFail": 38 }
+      }
+    },
+    {
+      "id": "scare",
+      "name": "Scare",
+      "bookId": "book_arcane_1",
+      "effect": "ScareMonster",
+      "classes": {
+        "Mage": { "level": 8, "mana": 3, "baseFail": 28 },
+        "Rogue": { "level": 16, "mana": 3, "baseFail": 38 }
+      }
+    },
+    {
+      "id": "find_treasure",
+      "name": "Find Treasure",
+      "bookId": "book_arcane_1",
+      "effect": "FindTreasure",
+      "power": "30",
+      "classes": {
+        "Mage": { "level": 9, "mana": 5, "baseFail": 30 },
+        "Ranger": { "level": 13, "mana": 5, "baseFail": 40 },
+        "Rogue": { "level": 17, "mana": 5, "baseFail": 40 }
+      }
+    },
+    {
+      "id": "frost_bolt",
+      "name": "Frost Bolt",
+      "bookId": "book_arcane_2",
+      "effect": "FrostBolt",
+      "power": "4d8",
+      "extraDieEvery": 2,
+      "classes": {
+        "Mage": { "level": 11, "mana": 5, "baseFail": 35 },
+        "Rogue": { "level": 20, "mana": 5, "baseFail": 45 }
+      }
+    },
+    {
+      "id": "slow",
+      "name": "Slow",
+      "bookId": "book_arcane_2",
+      "effect": "SlowMonster",
+      "classes": {
+        "Mage": { "level": 13, "mana": 6, "baseFail": 40 },
+        "Rogue": { "level": 23, "mana": 6, "baseFail": 50 }
+      }
+    },
+    {
+      "id": "clairvoyance",
+      "name": "Clairvoyance",
+      "bookId": "book_arcane_2",
+      "effect": "MagicMapping",
+      "classes": {
+        "Mage": { "level": 14, "mana": 7, "baseFail": 40 },
+        "Ranger": { "level": 19, "mana": 7, "baseFail": 50 },
+        "Rogue": { "level": 25, "mana": 7, "baseFail": 50 }
+      }
+    },
+    {
+      "id": "lightning_bolt",
+      "name": "Lightning Bolt",
+      "bookId": "book_arcane_2",
+      "effect": "LightningBolt",
+      "power": "6d8",
+      "extraDieEvery": 2,
+      "classes": {
+        "Mage": { "level": 15, "mana": 8, "baseFail": 40 },
+        "Rogue": { "level": 26, "mana": 8, "baseFail": 50 }
+      }
+    },
+    {
+      "id": "teleport",
+      "name": "Teleport",
+      "bookId": "book_arcane_2",
+      "effect": "Teleport",
+      "classes": {
+        "Mage": { "level": 17, "mana": 9, "baseFail": 45 },
+        "Rogue": { "level": 29, "mana": 9, "baseFail": 55 }
+      }
+    },
+    {
+      "id": "haste",
+      "name": "Haste",
+      "bookId": "book_arcane_2",
+      "effect": "Haste",
+      "power": "1d20+20",
+      "classes": {
+        "Mage": { "level": 20, "mana": 12, "baseFail": 50 },
+        "Ranger": { "level": 27, "mana": 12, "baseFail": 60 },
+        "Rogue": { "level": 34, "mana": 12, "baseFail": 60 }
+      }
+    },
+    {
+      "id": "confuse_monster",
+      "name": "Confuse Monster",
+      "bookId": "book_arcane_2",
+      "effect": "ConfuseMonster",
+      "classes": {
+        "Mage": { "level": 12, "mana": 6, "baseFail": 38 },
+        "Rogue": { "level": 22, "mana": 6, "baseFail": 48 }
+      }
+    },
+    {
+      "id": "recharge",
+      "name": "Recharge",
+      "bookId": "book_arcane_2",
+      "effect": "Recharge",
+      "power": "2d4",
+      "classes": {
+        "Mage": { "level": 16, "mana": 9, "baseFail": 45 },
+        "Rogue": { "level": 28, "mana": 9, "baseFail": 55 }
+      }
+    },
+    {
+      "id": "fireball",
+      "name": "Fireball",
+      "bookId": "book_arcane_3",
+      "effect": "Fireball",
+      "power": "8d6",
+      "extraDieEvery": 2,
+      "classes": {
+        "Mage": { "level": 25, "mana": 15, "baseFail": 55 }
+      }
+    },
+    {
+      "id": "acid_arrow",
+      "name": "Acid Arrow",
+      "bookId": "book_arcane_3",
+      "effect": "AcidBolt",
+      "power": "10d8",
+      "extraDieEvery": 2,
+      "classes": {
+        "Mage": { "level": 27, "mana": 16, "baseFail": 55 }
+      }
+    },
+    {
+      "id": "cone_of_cold",
+      "name": "Cone of Cold",
+      "bookId": "book_arcane_3",
+      "effect": "ColdBall",
+      "power": "10d8",
+      "extraDieEvery": 2,
+      "classes": {
+        "Mage": { "level": 30, "mana": 20, "baseFail": 60 }
+      }
+    },
+    {
+      "id": "dimension_door",
+      "name": "Dimension Door",
+      "bookId": "book_arcane_3",
+      "effect": "DimensionDoor",
+      "classes": {
+        "Mage": { "level": 33, "mana": 25, "baseFail": 65 }
+      }
+    },
+    {
+      "id": "vampiric_touch",
+      "name": "Vampiric Touch",
+      "bookId": "book_arcane_3",
+      "effect": "VampiricTouch",
+      "power": "6d8",
+      "extraDieEvery": 2,
+      "classes": {
+        "Mage": { "level": 26, "mana": 15, "baseFail": 55 }
+      }
+    },
+    {
+      "id": "disintegrate",
+      "name": "Disintegrate",
+      "bookId": "book_arcane_4",
+      "effect": "Disintegrate",
+      "power": "10d6+40",
+      "classes": {
+        "Mage": { "level": 36, "mana": 30, "baseFail": 70 }
+      }
+    },
+    {
+      "id": "meteor_swarm",
+      "name": "Meteor Swarm",
+      "bookId": "book_arcane_4",
+      "effect": "MeteorSwarm",
+      "power": "8d6",
+      "extraDieEvery": 8,
+      "classes": {
+        "Mage": { "level": 40, "mana": 40, "baseFail": 75 }
+      }
+    },
+    {
+      "id": "bless",
+      "name": "Bless",
+      "realm": "Divine",
+      "bookId": "book_prayers_1",
+      "effect": "Bless",
+      "power": "1d12+12",
+      "classes": {
+        "Priest": { "level": 1, "mana": 1, "baseFail": 15 },
+        "Paladin": { "level": 1, "mana": 1, "baseFail": 25 }
+      }
+    },
+    {
+      "id": "cure_light",
+      "name": "Cure Light Wounds",
+      "realm": "Divine",
+      "bookId": "book_prayers_1",
+      "effect": "Heal",
+      "power": "2d8+2",
+      "classes": {
+        "Priest": { "level": 1, "mana": 2, "baseFail": 20 },
+        "Paladin": { "level": 1, "mana": 2, "baseFail": 30 }
+      }
+    },
+    {
+      "id": "guiding_bolt",
+      "name": "Guiding Bolt",
+      "realm": "Divine",
+      "bookId": "book_prayers_1",
+      "effect": "MagicMissile",
+      "power": "2d8",
+      "extraDieEvery": 3,
+      "classes": {
+        "Priest": { "level": 3, "mana": 2, "baseFail": 22 }
+      }
+    },
+    {
+      "id": "detect_evil",
+      "name": "Detect Evil",
+      "realm": "Divine",
+      "bookId": "book_prayers_1",
+      "effect": "DetectEvil",
+      "classes": {
+        "Priest": { "level": 3, "mana": 1, "baseFail": 20 },
+        "Paladin": { "level": 4, "mana": 1, "baseFail": 30 }
+      }
+    },
+    {
+      "id": "courage",
+      "name": "Courage",
+      "realm": "Divine",
+      "bookId": "book_prayers_1",
+      "effect": "Heroism",
+      "power": "1d25+25",
+      "classes": {
+        "Priest": { "level": 5, "mana": 3, "baseFail": 25 },
+        "Paladin": { "level": 6, "mana": 3, "baseFail": 35 }
+      }
+    },
+    {
+      "id": "daylight",
+      "name": "Daylight",
+      "realm": "Divine",
+      "bookId": "book_prayers_1",
+      "effect": "Daylight",
+      "power": "2d6",
+      "extraDieEvery": 5,
+      "classes": {
+        "Priest": { "level": 5, "mana": 3, "baseFail": 25 }
+      }
+    },
+    {
+      "id": "command",
+      "name": "Command",
+      "realm": "Divine",
+      "bookId": "book_prayers_1",
+      "effect": "ScareMonster",
+      "classes": {
+        "Priest": { "level": 7, "mana": 4, "baseFail": 28 }
+      }
+    },
+    {
+      "id": "neutralize_poison",
+      "name": "Neutralize Poison",
+      "realm": "Divine",
+      "bookId": "book_prayers_1",
+      "effect": "CurePoison",
+      "classes": {
+        "Priest": { "level": 9, "mana": 4, "baseFail": 28 }
+      }
+    },
+    {
+      "id": "locate",
+      "name": "Locate",
+      "realm": "Divine",
+      "bookId": "book_prayers_1",
+      "effect": "Locate",
+      "classes": {
+        "Priest": { "level": 4, "mana": 2, "baseFail": 22 }
+      }
+    },
+    {
+      "id": "sanctuary",
+      "name": "Sanctuary",
+      "realm": "Divine",
+      "bookId": "book_prayers_1",
+      "effect": "Sanctuary",
+      "power": "1d4+4",
+      "classes": {
+        "Priest": { "level": 6, "mana": 3, "baseFail": 25 }
+      }
+    },
+    {
+      "id": "lay_on_hands",
+      "name": "Lay on Hands",
+      "realm": "Divine",
+      "bookId": "book_prayers_1",
+      "effect": "Heal",
+      "power": "3d8+12",
+      "extraDieEvery": 3,
+      "classes": {
+        "Paladin": { "level": 5, "mana": 5, "baseFail": 25 }
+      }
+    },
+    {
+      "id": "cure_serious",
+      "name": "Cure Serious Wounds",
+      "realm": "Divine",
+      "bookId": "book_prayers_2",
+      "effect": "Heal",
+      "power": "4d8+10",
+      "classes": {
+        "Priest": { "level": 11, "mana": 6, "baseFail": 35 },
+        "Paladin": { "level": 14, "mana": 6, "baseFail": 45 }
+      }
+    },
+    {
+      "id": "protection_evil",
+      "name": "Protection from Evil",
+      "realm": "Divine",
+      "bookId": "book_prayers_2",
+      "effect": "ProtectionFromEvil",
+      "power": "1d25+30",
+      "classes": {
+        "Priest": { "level": 13, "mana": 8, "baseFail": 38 },
+        "Paladin": { "level": 17, "mana": 8, "baseFail": 48 }
+      }
+    },
+    {
+      "id": "hold_monster",
+      "name": "Hold Monster",
+      "realm": "Divine",
+      "bookId": "book_prayers_2",
+      "effect": "HoldMonster",
+      "power": "1d4+2",
+      "classes": {
+        "Priest": { "level": 14, "mana": 8, "baseFail": 40 }
+      }
+    },
+    {
+      "id": "remove_curse",
+      "name": "Remove Curse",
+      "realm": "Divine",
+      "bookId": "book_prayers_2",
+      "effect": "RemoveCurse",
+      "classes": {
+        "Priest": { "level": 15, "mana": 10, "baseFail": 40 },
+        "Paladin": { "level": 20, "mana": 10, "baseFail": 50 }
+      }
+    },
+    {
+      "id": "flame_strike",
+      "name": "Flame Strike",
+      "realm": "Divine",
+      "bookId": "book_prayers_2",
+      "effect": "Fireball",
+      "power": "6d8",
+      "extraDieEvery": 2,
+      "classes": {
+        "Priest": { "level": 17, "mana": 10, "baseFail": 45 }
+      }
+    },
+    {
+      "id": "prayer",
+      "name": "Prayer",
+      "realm": "Divine",
+      "bookId": "book_prayers_2",
+      "effect": "Prayer",
+      "power": "1d24+48",
+      "classes": {
+        "Priest": { "level": 19, "mana": 12, "baseFail": 45 }
+      }
+    },
+    {
+      "id": "resist_elements",
+      "name": "Resist Elements",
+      "realm": "Divine",
+      "bookId": "book_prayers_2",
+      "effect": "ResistElements",
+      "power": "1d20+20",
+      "classes": {
+        "Priest": { "level": 12, "mana": 7, "baseFail": 38 }
+      }
+    },
+    {
+      "id": "draw_forth_evil",
+      "name": "Draw Forth Evil",
+      "realm": "Divine",
+      "bookId": "book_prayers_2",
+      "effect": "DrawForthEvil",
+      "classes": {
+        "Priest": { "level": 10, "mana": 6, "baseFail": 36 },
+        "Paladin": { "level": 13, "mana": 6, "baseFail": 46 }
+      }
+    },
+    {
+      "id": "cure_critical",
+      "name": "Cure Critical Wounds",
+      "realm": "Divine",
+      "bookId": "book_prayers_3",
+      "effect": "Heal",
+      "power": "8d8+30",
+      "classes": {
+        "Priest": { "level": 25, "mana": 15, "baseFail": 55 }
+      }
+    },
+    {
+      "id": "dispel_undead",
+      "name": "Dispel Undead",
+      "realm": "Divine",
+      "bookId": "book_prayers_3",
+      "effect": "DispelUndead",
+      "power": "4d10",
+      "extraDieEvery": 2,
+      "classes": {
+        "Priest": { "level": 27, "mana": 18, "baseFail": 55 }
+      }
+    },
+    {
+      "id": "word_of_recall",
+      "name": "Word of Recall",
+      "realm": "Divine",
+      "bookId": "book_prayers_3",
+      "effect": "Escape",
+      "classes": {
+        "Priest": { "level": 30, "mana": 20, "baseFail": 60 }
+      }
+    },
+    {
+      "id": "heal",
+      "name": "Heal",
+      "realm": "Divine",
+      "bookId": "book_prayers_3",
+      "effect": "Heal",
+      "power": "300",
+      "classes": {
+        "Priest": { "level": 33, "mana": 25, "baseFail": 65 }
+      }
+    },
+    {
+      "id": "holy_word",
+      "name": "Holy Word",
+      "realm": "Divine",
+      "bookId": "book_prayers_4",
+      "effect": "DispelEvil",
+      "power": "5d20",
+      "extraDieEvery": 2,
+      "classes": {
+        "Priest": { "level": 38, "mana": 35, "baseFail": 70 }
+      }
+    }
+  ],
+  "shops": [
+    {
+      "id": "Weaponsmith",
+      "name": "Weaponsmith",
+      "trades": ["Blade", "Blunt", "Polearm", "Launcher", "Ammo"],
+      "staples": [
+        { "item": "arrow", "quantity": 3 },
+        { "item": "sling_bullet", "quantity": 3 },
+        { "item": "bolt", "quantity": 3, "fromLevel": 5 }
+      ],
+      "randomItems": 8
+    },
+    {
+      "id": "Armoury",
+      "name": "Armoury",
+      "trades": ["BodyArmour", "Shield", "Cloak", "Helm", "Gloves", "Boots"],
+      "staples": [
+        { "item": "leather_armour", "quantity": 1 },
+        { "item": "leather_cap", "quantity": 1 },
+        { "item": "leather_boots", "quantity": 1 }
+      ],
+      "randomItems": 9
+    },
+    {
+      "id": "MagicShop",
+      "name": "Magic Shop",
+      "trades": ["Wand", "Staff", "Ring", "Amulet", "Book", "Light"],
+      "staples": [
+        { "item": "book_arcane_1", "quantity": 1 },
+        { "item": "book_prayers_1", "quantity": 1 },
+        { "item": "book_arcane_2", "quantity": 1, "fromLevel": 8 },
+        { "item": "book_prayers_2", "quantity": 1, "fromLevel": 8 },
+        { "item": "lantern", "quantity": 1, "fromLevel": 3 }
+      ],
+      "occasionals": [
+        { "item": "book_arcane_3", "chance": 50, "max": 1, "fromLevel": 22 },
+        { "item": "book_prayers_3", "chance": 50, "max": 1, "fromLevel": 22 },
+        { "item": "book_arcane_4", "chance": 25, "max": 1, "fromLevel": 35 },
+        { "item": "book_prayers_4", "chance": 25, "max": 1, "fromLevel": 35 }
+      ],
+      "randomItems": 6
+    },
+    {
+      "id": "Alchemist",
+      "name": "Alchemist",
+      "trades": ["Potion", "Scroll", "Token"],
+      "staples": [
+        { "item": "potion_healing", "quantity": 10 },
+        { "item": "potion_greater_healing", "quantity": 6, "fromLevel": 10 },
+        { "item": "potion_superior_healing", "quantity": 4, "fromLevel": 20 },
+        { "item": "scroll_escape", "quantity": 3 },
+        { "item": "scroll_identify", "quantity": 5 },
+        { "item": "potion_antitoxin", "quantity": 3 },
+        { "item": "scroll_remove_curse", "quantity": 2 }
+      ],
+      "occasionals": [
+        { "item": "scroll_lure", "chance": 80, "max": 4 },
+        { "item": "potion_restore_strength", "chance": 35, "max": 2 },
+        { "item": "potion_restore_constitution", "chance": 35, "max": 2 },
+        { "item": "scroll_travel_1km", "chance": 35, "max": 2 },
+        { "item": "scroll_travel_3km", "chance": 30, "max": 2, "fromLevel": 4 },
+        { "item": "scroll_travel_10km", "chance": 25, "max": 1, "fromLevel": 10 },
+        { "item": "scroll_travel_30km", "chance": 20, "max": 1, "fromLevel": 20 },
+        { "item": "scroll_hearthcall", "chance": 20, "max": 1, "fromLevel": 5 },
+        { "item": "waystone_shard", "chance": 25, "max": 1, "fromLevel": 5 }
+      ],
+      "randomItems": 7
+    }
+  ],
+  "races": [
+    {
+      "id": "Human",
+      "name": "Human",
+      "statModifiers": {
+        "str": 0,
+        "int": 0,
+        "wis": 0,
+        "dex": 0,
+        "con": 0,
+        "cha": 0
+      },
+      "skills": {
+        "disarm": 0,
+        "search": 0,
+        "stealth": 0,
+        "perception": 0,
+        "melee": 0,
+        "ranged": 0,
+        "saving": 0
+      },
+      "hitDie": 10,
+      "experienceFactor": 100,
+      "infravision": 0,
+      "classes": ["Warrior", "Mage", "Priest", "Rogue", "Ranger", "Paladin"],
+      "baseAge": 16,
+      "ageDie": 10,
+      "heightCm": 170,
+      "heightSpreadCm": 15,
+      "weightKg": 72,
+      "weightSpreadKg": 15
+    },
+    {
+      "id": "HalfElf",
+      "name": "Half-Elf",
+      "statModifiers": {
+        "str": -1,
+        "int": 1,
+        "wis": 0,
+        "dex": 1,
+        "con": -1,
+        "cha": 1
+      },
+      "skills": {
+        "disarm": 2,
+        "search": 4,
+        "stealth": 1,
+        "perception": 2,
+        "melee": -1,
+        "ranged": 5,
+        "saving": 2
+      },
+      "hitDie": 9,
+      "experienceFactor": 110,
+      "infravision": 2,
+      "classes": ["Warrior", "Mage", "Priest", "Rogue", "Ranger", "Paladin"],
+      "baseAge": 22,
+      "ageDie": 20,
+      "heightCm": 172,
+      "heightSpreadCm": 10,
+      "weightKg": 63,
+      "weightSpreadKg": 10
+    },
+    {
+      "id": "Elf",
+      "name": "Elf",
+      "statModifiers": {
+        "str": -1,
+        "int": 2,
+        "wis": 1,
+        "dex": 1,
+        "con": -2,
+        "cha": 1
+      },
+      "skills": {
+        "disarm": 5,
+        "search": 6,
+        "stealth": 2,
+        "perception": 4,
+        "melee": -5,
+        "ranged": 12,
+        "saving": 6
+      },
+      "hitDie": 8,
+      "experienceFactor": 120,
+      "infravision": 3,
+      "classes": ["Warrior", "Mage", "Priest", "Rogue", "Ranger"],
+      "baseAge": 80,
+      "ageDie": 100,
+      "heightCm": 180,
+      "heightSpreadCm": 10,
+      "weightKg": 60,
+      "weightSpreadKg": 8
+    },
+    {
+      "id": "Halfling",
+      "name": "Halfling",
+      "statModifiers": {
+        "str": -2,
+        "int": 1,
+        "wis": 1,
+        "dex": 3,
+        "con": 1,
+        "cha": 0
+      },
+      "skills": {
+        "disarm": 12,
+        "search": 8,
+        "stealth": 4,
+        "perception": 8,
+        "melee": -10,
+        "ranged": 18,
+        "saving": 15
+      },
+      "hitDie": 7,
+      "experienceFactor": 110,
+      "infravision": 4,
+      "classes": ["Warrior", "Mage", "Rogue"],
+      "baseAge": 22,
+      "ageDie": 12,
+      "heightCm": 95,
+      "heightSpreadCm": 10,
+      "weightKg": 30,
+      "weightSpreadKg": 6
+    },
+    {
+      "id": "Gnome",
+      "name": "Gnome",
+      "statModifiers": {
+        "str": -1,
+        "int": 2,
+        "wis": 0,
+        "dex": 2,
+        "con": 1,
+        "cha": -1
+      },
+      "skills": {
+        "disarm": 10,
+        "search": 6,
+        "stealth": 3,
+        "perception": 5,
+        "melee": -8,
+        "ranged": 10,
+        "saving": 12
+      },
+      "hitDie": 8,
+      "experienceFactor": 125,
+      "infravision": 4,
+      "classes": ["Warrior", "Mage", "Priest", "Rogue"],
+      "baseAge": 45,
+      "ageDie": 40,
+      "heightCm": 105,
+      "heightSpreadCm": 8,
+      "weightKg": 40,
+      "weightSpreadKg": 6
+    },
+    {
+      "id": "Dwarf",
+      "name": "Dwarf",
+      "statModifiers": {
+        "str": 2,
+        "int": -2,
+        "wis": 2,
+        "dex": -1,
+        "con": 2,
+        "cha": -2
+      },
+      "skills": {
+        "disarm": 2,
+        "search": 6,
+        "stealth": -1,
+        "perception": 1,
+        "melee": 12,
+        "ranged": -2,
+        "saving": 8
+      },
+      "hitDie": 11,
+      "experienceFactor": 120,
+      "infravision": 5,
+      "classes": ["Warrior", "Priest"],
+      "baseAge": 35,
+      "ageDie": 30,
+      "heightCm": 135,
+      "heightSpreadCm": 8,
+      "weightKg": 70,
+      "weightSpreadKg": 10
+    },
+    {
+      "id": "HalfOrc",
+      "name": "Half-Orc",
+      "statModifiers": {
+        "str": 2,
+        "int": -1,
+        "wis": 0,
+        "dex": 0,
+        "con": 1,
+        "cha": -3
+      },
+      "skills": {
+        "disarm": -3,
+        "search": -2,
+        "stealth": -1,
+        "perception": -1,
+        "melee": 10,
+        "ranged": -3,
+        "saving": -3
+      },
+      "hitDie": 10,
+      "experienceFactor": 110,
+      "infravision": 3,
+      "classes": ["Warrior", "Priest", "Rogue"],
+      "baseAge": 12,
+      "ageDie": 8,
+      "heightCm": 172,
+      "heightSpreadCm": 12,
+      "weightKg": 80,
+      "weightSpreadKg": 15
+    },
+    {
+      "id": "HalfTroll",
+      "name": "Half-Troll",
+      "statModifiers": {
+        "str": 4,
+        "int": -4,
+        "wis": -2,
+        "dex": -3,
+        "con": 3,
+        "cha": -5
+      },
+      "skills": {
+        "disarm": -5,
+        "search": -8,
+        "stealth": -2,
+        "perception": -8,
+        "melee": 18,
+        "ranged": -8,
+        "saving": -8
+      },
+      "hitDie": 12,
+      "experienceFactor": 120,
+      "infravision": 3,
+      "classes": ["Warrior", "Priest"],
+      "baseAge": 18,
+      "ageDie": 12,
+      "heightCm": 235,
+      "heightSpreadCm": 20,
+      "weightKg": 130,
+      "weightSpreadKg": 25
+    }
+  ],
+  "classes": [
+    {
+      "id": "Warrior",
+      "name": "Warrior",
+      "statModifiers": {
+        "str": 3,
+        "int": -2,
+        "wis": -1,
+        "dex": 1,
+        "con": 2,
+        "cha": 0
+      },
+      "skills": {
+        "disarm": 5,
+        "search": 1,
+        "stealth": 0,
+        "perception": 2,
+        "melee": 20,
+        "ranged": 15,
+        "saving": 5
+      },
+      "hitDieBonus": 8,
+      "experiencePenalty": 0,
+      "startingKit": ["short_sword", "leather_armour", "leather_cap", "potion_healing", "potion_healing", "torch"],
+      "levelsPerBlow": 12
+    },
+    {
+      "id": "Mage",
+      "name": "Mage",
+      "statModifiers": {
+        "str": -3,
+        "int": 3,
+        "wis": 0,
+        "dex": 1,
+        "con": -1,
+        "cha": 0
+      },
+      "skills": {
+        "disarm": 10,
+        "search": 6,
+        "stealth": 2,
+        "perception": 5,
+        "melee": -10,
+        "ranged": -5,
+        "saving": 15
+      },
+      "hitDieBonus": 6,
+      "experiencePenalty": 15,
+      "spellStat": "Int",
+      "startingKit": ["dagger", "robe", "book_arcane_1", "potion_healing", "scroll_misty_step", "torch"],
+      "levelsPerBlow": 22,
+      "wardPerTenLevels": 5
+    },
+    {
+      "id": "Priest",
+      "name": "Priest",
+      "statModifiers": {
+        "str": -1,
+        "int": -1,
+        "wis": 3,
+        "dex": -1,
+        "con": 0,
+        "cha": 1
+      },
+      "skills": {
+        "disarm": 5,
+        "search": 4,
+        "stealth": 1,
+        "perception": 3,
+        "melee": 0,
+        "ranged": -5,
+        "saving": 12
+      },
+      "hitDieBonus": 4,
+      "experiencePenalty": 10,
+      "spellStat": "Wis",
+      "startingKit": ["mace", "robe", "book_prayers_1", "potion_healing", "potion_healing", "torch"],
+      "levelsPerBlow": 12,
+      "wardPerTenLevels": 3
+    },
+    {
+      "id": "Rogue",
+      "name": "Rogue",
+      "statModifiers": {
+        "str": 1,
+        "int": 1,
+        "wis": -2,
+        "dex": 3,
+        "con": 1,
+        "cha": -1
+      },
+      "skills": {
+        "disarm": 20,
+        "search": 12,
+        "stealth": 5,
+        "perception": 10,
+        "melee": 10,
+        "ranged": 12,
+        "saving": 8
+      },
+      "hitDieBonus": 7,
+      "experiencePenalty": 12,
+      "spellStat": "Int",
+      "startingKit": ["dagger", "sling", "sling_bullet", "leather_armour", "book_arcane_1", "potion_healing", "torch"],
+      "levelsPerBlow": 10
+    },
+    {
+      "id": "Ranger",
+      "name": "Ranger",
+      "statModifiers": {
+        "str": 1,
+        "int": 2,
+        "wis": 0,
+        "dex": 1,
+        "con": 1,
+        "cha": 0
+      },
+      "skills": {
+        "disarm": 12,
+        "search": 8,
+        "stealth": 3,
+        "perception": 8,
+        "melee": 8,
+        "ranged": 22,
+        "saving": 10
+      },
+      "hitDieBonus": 7,
+      "experiencePenalty": 20,
+      "spellStat": "Int",
+      "startingKit": ["short_sword", "shortbow", "arrow", "leather_armour", "book_arcane_1", "potion_healing", "torch"],
+      "levelsPerBlow": 10
+    },
+    {
+      "id": "Paladin",
+      "name": "Paladin",
+      "statModifiers": {
+        "str": 2,
+        "int": -2,
+        "wis": 1,
+        "dex": 0,
+        "con": 1,
+        "cha": 2
+      },
+      "skills": {
+        "disarm": 3,
+        "search": 2,
+        "stealth": 0,
+        "perception": 1,
+        "melee": 16,
+        "ranged": 5,
+        "saving": 10
+      },
+      "hitDieBonus": 6,
+      "experiencePenalty": 18,
+      "spellStat": "Wis",
+      "startingKit": ["longsword", "leather_armour", "book_prayers_1", "potion_healing", "torch"],
+      "levelsPerBlow": 9
+    }
+  ],
+  "dungeons": {
+    "partyTier": 4,
+    "depthsLevelsPerFloor": 2,
+    "depthsMaxLevel": 80,
+    "nativeWeight": 3,
+    "tiers": [
+      { "floors": 3, "minLevel": 3, "maxLevel": 12 },
+      { "floors": 5, "minLevel": 10, "maxLevel": 22 },
+      { "floors": 7, "minLevel": 20, "maxLevel": 35 },
+      { "floors": 9, "minLevel": 30, "maxLevel": 45 }
+    ],
+    "themes": {
+      "Keep": {
+        "families": ["Person", "Orc", "Goblinoid", "Ogre", "Troll", "Giant"],
+        "names": ["The Dungeons of {0}", "The Warrens under {0}", "The Undercroft of {0}"],
+        "unnamed": ["The Sunken Keep", "The Broken Bastion", "The Grey Hold"]
+      },
+      "Ruins": {
+        "families": ["Skeleton", "Zombie", "Ghost", "Wight", "Vampire", "Lich", "Person"],
+        "names": ["The Barrow of {0}", "The Sunken Halls of {0}", "The Crypts beneath {0}"],
+        "unnamed": ["The Forgotten Barrow", "The Mossy Ruin", "The Old Crypt"]
+      },
+      "Tower": {
+        "families": ["Person", "Elemental", "Golem", "MinorDemon", "FloatingEye", "MajorDemon"],
+        "names": ["The Spire of {0}", "The Tower of {0}", "The Arcane Cellars of {0}"],
+        "unnamed": ["The Leaning Spire", "The Crooked Tower", "The Silent Tower"]
+      },
+      "Cave": {
+        "families": ["Spider", "Ant", "Centipede", "Worm", "Reptile", "Troll", "YoungDragon", "Dragon"],
+        "names": ["The Deeps of {0}", "The Hollows under {0}", "The Wyrm's Hole at {0}"],
+        "unnamed": ["The Black Pit", "The Dripping Deep", "The Old Workings"]
+      },
+      "Eyrie": {
+        "families": ["Hybrid", "Giant", "Bat", "Feline", "Elemental", "YoungDragon"],
+        "names": ["The Eyrie of {0}", "The Windswept Caves of {0}", "The Aerie above {0}"],
+        "unnamed": ["The High Eyrie", "The Windy Crag", "The Stormwatch"]
+      },
+      "Vault": {
+        "families": ["Golem", "Jelly", "Mold", "Person", "Ghost", "MinorDemon"],
+        "names": ["The Vaults beneath {0}", "The Hidden Galleries of {0}", "The Sealed Stores of {0}"],
+        "unnamed": ["The Hidden Vault", "The Sealed Gallery", "The Lost Stores"]
+      }
+    }
+  },
+  "tuning": {
+    "experience": {
+      "fightsBase": 4,
+      "fightsPerLevel": 1.1,
+      "earlyUntilLevel": 6,
+      "earlyBase": 0.4,
+      "earlyPerLevel": 0.1,
+      "linear": 2,
+      "coefficient": 0.12,
+      "exponent": 2.45,
+      "maxLevelsPerFight": 2
+    },
+    "death": { "levelsLost": 1, "goldLostPercent": 20 },
+    "combat": {
+      "armourWeight": 2,
+      "shieldArmour": 20,
+      "damageFullUntilLevel": 8,
+      "damageTaperPercentPerLevel": 2,
+      "damageFloorPercent": 75,
+      "hitChanceMin": 5,
+      "hitChanceMax": 95,
+      "paralysisGraceTurns": 5,
+      "restPercent": 40,
+      "eliteLevelBoost": 2
+    },
+    "spawns": {
+      "firstSpawnChance": 30,
+      "secondSpawnChance": 8,
+      "toughOneIn": 6,
+      "outOfDepthOneIn": 12,
+      "outOfDepthLevels": 4,
+      "nearLevels": 5,
+      "midLevels": 10,
+      "nearWeight": 20,
+      "midWeight": 4,
+      "farWeight": 1
+    },
+    "world": {
+      "areaRings": [100, 220, 360, 520, 700, 900, 1150, 1450, 1800, 2200],
+      "midRingMetres": 700,
+      "outerRingMetres": 3000,
+      "fleeBase": 50,
+      "fleeMin": 10,
+      "metresForFullHeal": 600,
+      "metresForFullMana": 450,
+      "restHoursForFull": 2,
+      "campGoldPerHourPerLevel": 20,
+      "treasureChancePercent": 25,
+      "treasureItemChancePercent": 40
+    },
+    "items": {
+      "outOfDepthOneIn": 10,
+      "outOfDepthLevels": 5,
+      "cursedChance": 8,
+      "artifactLevel": 25,
+      "themedLootPercent": 60
+    },
+    "shops": {
+      "restockHours": 12,
+      "levelHeadroom": 2,
+      "sellPercent": 40,
+      "identifiedSellPercent": 50,
+      "unknownSellPercent": 5,
+      "egoValuePerLevel": 150,
+      "artifactValuePerLevel": 500
+    }
+  }
+}

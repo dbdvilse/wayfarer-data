@@ -1,7 +1,12 @@
 {
   "schema": 1,
-  "latest": "2026.10.20-1",
-  "url": "data/game-data-2026.10.20-1.json",
-  "sha256": "e99a1b77fe6cae75b9dce6e9cff00467eae2cecf22d9ebe76b3ca038c698a9d9",
-  "bytes": 137154
+  "latest": "2026.10.20-2",
+  "url": "data/game-data-2026.10.20-2.json",
+  "sha256": "c49edfb04c8a6b5822442fade008c24903301eda2816ebb17405987599d1f6f2",
+  "bytes": 137154,
+  "signature": {
+    "kid": "k1",
+    "alg": "RS256",
+    "value": "kpygNz6vXYB49tKV8i6N/VzMl+I8Rub1XZpXUOfW3EpwZaFDG/g2N5GAIoc4oJzf8w3wHx2wJsyNXeXvu+puw9Q+4TLIhKwsD3iFbRP2mXCifLjMlSLCBLBAgkiQ68i0+JSIqw+HWpZ+7yvsen8OKfFnMz6l9IZdfZ2muWX2hWk1n2H5oHrV+bNGScDO+yv6c29yVu1QcibFEZWe6p1iffAiDiatSL9BqJW0V0eOhSzn6H6jeBSlV0Sjg42ezODOOx1rV/6y5OZrLPPebIg6ahey4hnDF/HIYCb2sdi1CEDUraGC+JrskRYcAZQm3+Z57NTqc1rKbQ1FhZ3KoONq+BAOcW3PYihcX1YlVUlqK4sVoc5Lgib3rVRzcpKLRr4v/cB7GkyqjXe8JZJiH5mjgYlIDuZnHkQ8h52UrCVYyBrQqbuUBs46E0p0GSj9dB0pRqmBpWWLyCsKMW618i6kOriUWRTDBRPpuq4XQssRBbQYVViSAQVK/v38CJDBUzQm"
+  }
 }

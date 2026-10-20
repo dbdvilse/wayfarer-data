@@ -1,0 +1,3 @@
+# Keep the published files byte-for-byte as written: the manifest holds a checksum of each data file,
+# so line endings must never be changed on any machine.
+* -text

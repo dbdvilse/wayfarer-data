@@ -1,0 +1,9 @@
+{
+  // Wayfarer's published game data: static files only, no Worker code.
+  // Static file requests are free and unlimited on Cloudflare.
+  "name": "wayfarer-data",
+  "compatibility_date": "2026-10-20",
+  "assets": {
+    "directory": "./public"
+  }
+}

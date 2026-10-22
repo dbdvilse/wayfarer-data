@@ -1,9 +1,18 @@
 {
-  // Wayfarer's published game data: static files only, no Worker code.
-  // Static file requests are free and unlimited on Cloudflare.
+  // Wayfarer's published game data (static files, free and unlimited on Cloudflare) plus one small Worker route for the
+  // optional anonymous play statistics (item 149): only requests to /api/* run the Worker; every other request is served from ./public directly.
   "name": "wayfarer-data",
+  "main": "src/index.js",
   "compatibility_date": "2026-10-20",
   "assets": {
-    "directory": "./public"
-  }
+    "directory": "./public",
+    "run_worker_first": ["/api/*"]
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "wayfarer-stats",
+      "database_id": "577d6c54-1b7c-41b5-ae12-4d1f73f01cc2"
+    }
+  ]
 }

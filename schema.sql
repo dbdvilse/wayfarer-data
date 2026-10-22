@@ -35,3 +35,43 @@ CREATE TABLE IF NOT EXISTS call_claims (
   player TEXT NOT NULL,
   PRIMARY KEY (call, player)
 );
+
+-- Friends (item 174). The player is a SHA-256 hash of a random per-install key (a different salt from the Realm's Call).
+CREATE TABLE IF NOT EXISTS friend_profiles (    -- what friends may see: the hero's display name, class, race, level and season score
+  player  TEXT PRIMARY KEY,
+  code    TEXT NOT NULL UNIQUE,                 -- the friend code (8 letters and digits, no I, O, 0 or 1)
+  name    TEXT NOT NULL,
+  cls     TEXT NOT NULL,
+  race    TEXT NOT NULL,
+  level   INTEGER NOT NULL,
+  score   INTEGER NOT NULL,
+  updated TEXT NOT NULL                         -- the day (UTC)
+);
+CREATE TABLE IF NOT EXISTS friendships (        -- one row per pair: who asked, who was asked, pending or accepted
+  requester TEXT NOT NULL,
+  target    TEXT NOT NULL,
+  status    TEXT NOT NULL,
+  created   TEXT NOT NULL,
+  PRIMARY KEY (requester, target)
+);
+CREATE TABLE IF NOT EXISTS friend_blocks (
+  blocker TEXT NOT NULL,
+  blocked TEXT NOT NULL,
+  PRIMARY KEY (blocker, blocked)
+);
+CREATE TABLE IF NOT EXISTS friend_reports (     -- reports of a name or a player, for the owner to look at
+  id       INTEGER PRIMARY KEY AUTOINCREMENT,
+  reporter TEXT NOT NULL,
+  reported TEXT NOT NULL,
+  code     TEXT NOT NULL,
+  name     TEXT NOT NULL,
+  reason   TEXT NOT NULL,
+  created  TEXT NOT NULL
+);
+CREATE TABLE IF NOT EXISTS friend_limits (      -- per player per day counters (adds, reports)
+  player TEXT NOT NULL,
+  day    TEXT NOT NULL,
+  kind   TEXT NOT NULL,
+  n      INTEGER NOT NULL,
+  PRIMARY KEY (player, day, kind)
+);

@@ -8,6 +8,7 @@
     "directory": "./public",
     "run_worker_first": ["/api/*"]
   },
+  "triggers": { "crons": ["5 0 * * *"] }, // each day just after midnight UTC: opens the next Realm's Call when one is due
   "d1_databases": [
     {
       "binding": "DB",

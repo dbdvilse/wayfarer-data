@@ -307,7 +307,57 @@ async function friends(request, env, url) {
   return reply(404);
 }
 
+// --- The next Realm's Call, opened by itself (item 173) -------------------------------------
+// A daily cron: when the latest call ends within a day (or has ended) and nothing follows it, the next weekly call is added to `calls`.
+// The goal follows the last call's total (a little above it, never below 1,000), so a quiet game does not get a dead bar.
+// The themes by date are the same as the game's seasons; the owner can still add any call by hand (docs/REALM-CALL.md), which this leaves alone.
+const CALL_THEMES = [
+  { from: "2026-11-01", to: "2027-01-01", families: ["Goblinoid", "Goblinoid", "Orc", "Goblinoid"],
+    titles: ["Drive back the warbands", "Hold the roads", "Break the war-camps", "Burn out the warrens"],
+    story: "The goblin tribes keep coming. Every one you cut down this week is one fewer at the village gate." },
+  { from: "2027-01-01", to: "2027-04-01", families: ["Zombie", "Skeleton", "Ghost", "Zombie"],
+    titles: ["Lay the restless to rest", "Clear the churchyards", "Silence the wailing", "Close the barrows"],
+    story: "The dead are walking. Every one laid back in the ground this week is one the Pale King cannot use." },
+];
+
+export function nextCallPlan(latest, now) {
+  if (!latest) return null;
+  const endsMs = Date.parse(latest.ends);
+  if (!(endsMs - now.getTime() <= 24 * 3600 * 1000)) return null; // still running for more than a day
+  const todayStart = Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate());
+  const startMs = endsMs >= now.getTime() ? endsMs : todayStart;
+  const start = new Date(startMs);
+  const day = start.toISOString().slice(0, 10);
+  const theme = CALL_THEMES.find((t) => day >= t.from && day < t.to);
+  const week = Math.floor((startMs - Date.parse(theme ? theme.from : "2026-11-01")) / (7 * 24 * 3600 * 1000));
+  const slot = ((week % 4) + 4) % 4;
+  const goal = Math.min(100000, Math.max(1000, Math.ceil(((latest.total || 0) * 1.1) / 100) * 100));
+  return {
+    id: "auto-" + day.replace(/-/g, ""),
+    title: theme ? theme.titles[slot] : "Defend the realm",
+    story: theme ? theme.story : "Monsters press on every side. Slay them wherever you meet them.",
+    family: theme ? theme.families[slot] : "",
+    goal,
+    starts: start.toISOString().slice(0, 19) + "Z",
+    ends: new Date(startMs + 7 * 24 * 3600 * 1000).toISOString().slice(0, 19) + "Z",
+    reward_gold: 300, reward_title: "", min_kills: 25, daily_cap: 200,
+  };
+}
+
+async function openNextCall(env, now) {
+  if (!env.DB) return;
+  const latest = await env.DB.prepare("SELECT * FROM calls ORDER BY starts DESC LIMIT 1").first();
+  const plan = nextCallPlan(latest, now);
+  if (!plan) return;
+  await env.DB.prepare(
+    "INSERT OR IGNORE INTO calls (id, title, story, family, goal, starts, ends, reward_gold, reward_title, min_kills, daily_cap) VALUES (?1,?2,?3,?4,?5,?6,?7,?8,?9,?10,?11)")
+    .bind(plan.id, plan.title, plan.story, plan.family, plan.goal, plan.starts, plan.ends, plan.reward_gold, plan.reward_title, plan.min_kills, plan.daily_cap).run();
+}
+
 export default {
+  async scheduled(event, env, ctx) {
+    ctx.waitUntil(openNextCall(env, new Date()));
+  },
   async fetch(request, env) {
     const url = new URL(request.url);
     if (url.pathname === "/api/call" || url.pathname.startsWith("/api/call/")) return realmCall(request, env, url);

@@ -1,1 +1,2 @@
 2026-11-21 11:52:52Z  2026.11.21-1  emergency: added 25 items; the old edition fails today's id check, so the policy cannot compare
+2026-11-21 19:40:06Z  2026.11.21-2  emergency: season-policy check cannot load the old edition; adds stat-drain monsters, restore and cursed potions

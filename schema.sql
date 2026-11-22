@@ -45,8 +45,10 @@ CREATE TABLE IF NOT EXISTS friend_profiles (    -- what friends may see: the her
   race    TEXT NOT NULL,
   level   INTEGER NOT NULL,
   score   INTEGER NOT NULL,
-  updated TEXT NOT NULL                         -- the day (UTC)
+  updated TEXT NOT NULL,                        -- the day (UTC)
+  pid     TEXT NOT NULL DEFAULT ''              -- the player's account on the party server (Cloud Code), only handed to accepted friends, to address party invitations
 );
+-- An existing database gets the column with:  ALTER TABLE friend_profiles ADD COLUMN pid TEXT NOT NULL DEFAULT '';   (added 2026-11-23)
 CREATE TABLE IF NOT EXISTS friendships (        -- one row per pair: who asked, who was asked, pending or accepted
   requester TEXT NOT NULL,
   target    TEXT NOT NULL,

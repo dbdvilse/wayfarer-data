@@ -163,6 +163,7 @@ const CODE_ALPHABET = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
 const CODE = /^[A-Z2-9]{8}$/;
 const NAME = /^[\p{L}\p{N} '’.\-]{1,40}$/u;
 const SHORT = /^[A-Za-z0-9 \-]{1,20}$/;
+const PARTY_ID = /^[A-Za-z0-9_\-]{8,64}$/; // a player's id on the party server (Unity's are 28 letters and digits)
 const MAX_FRIENDS = 50;
 const MAX_ADDS_PER_DAY = 20;
 const MAX_REPORTS_PER_DAY = 10;
@@ -183,19 +184,22 @@ function cleanProfile(p) {
   if (typeof p.cls !== "string" || !SHORT.test(p.cls) || typeof p.race !== "string" || !SHORT.test(p.race)) return null;
   if (!Number.isInteger(p.level) || p.level < 1 || p.level > 100) return null;
   if (!Number.isInteger(p.score) || p.score < 0 || p.score > 1e9) return null;
-  return { name: p.name.trim(), cls: p.cls, race: p.race, level: p.level, score: p.score };
+  // The player's account on the party server (optional: an old app sends none). It is only ever handed to accepted friends, to address party invitations.
+  const pid = typeof p.pid === "string" && PARTY_ID.test(p.pid) ? p.pid : "";
+  return { name: p.name.trim(), cls: p.cls, race: p.race, level: p.level, score: p.score, pid };
 }
 
 // Everyone the player is connected to, with what each may see.
 async function friendList(env, me) {
   const rows = await env.DB.prepare(
-    "SELECT f.requester AS requester, f.status AS status, p.code AS code, p.name AS name, p.cls AS cls, p.race AS race, p.level AS level, p.score AS score " +
+    "SELECT f.requester AS requester, f.status AS status, p.code AS code, p.name AS name, p.cls AS cls, p.race AS race, p.level AS level, p.score AS score, p.pid AS pid " +
     "FROM friendships f JOIN friend_profiles p ON p.player = CASE WHEN f.requester = ?1 THEN f.target ELSE f.requester END " +
     "WHERE (f.requester = ?1 OR f.target = ?1) " +
     "AND NOT EXISTS (SELECT 1 FROM friend_blocks b WHERE (b.blocker = ?1 AND b.blocked = p.player) OR (b.blocker = p.player AND b.blocked = ?1))"
   ).bind(me).all();
   return (rows.results || []).map((r) => {
-    if (r.status === "accepted") return { status: "friend", code: r.code, name: r.name, cls: r.cls, race: r.race, level: r.level, score: r.score };
+    // (the party account id goes to accepted friends only, never to someone who has merely asked)
+    if (r.status === "accepted") return { status: "friend", code: r.code, name: r.name, cls: r.cls, race: r.race, level: r.level, score: r.score, pid: r.pid || "" };
     if (r.requester === me) return { status: "outgoing", code: r.code }; // asked by code: no name until they accept
     return { status: "incoming", code: r.code, name: r.name, cls: r.cls, race: r.race, level: r.level, score: r.score };
   });
@@ -235,14 +239,15 @@ async function friends(request, env, url) {
       if (!profile) return json(400, { error: "a profile is needed to join" });
       for (let attempt = 0; attempt < 6 && !mine; attempt++) {
         const code = newCode();
-        const result = await env.DB.prepare("INSERT OR IGNORE INTO friend_profiles (player, code, name, cls, race, level, score, updated) VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8)")
-          .bind(me, code, profile.name, profile.cls, profile.race, profile.level, profile.score, day).run();
+        const result = await env.DB.prepare("INSERT OR IGNORE INTO friend_profiles (player, code, name, cls, race, level, score, updated, pid) VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9)")
+          .bind(me, code, profile.name, profile.cls, profile.race, profile.level, profile.score, day, profile.pid).run();
         if (result.meta && result.meta.changes > 0) mine = { code };
       }
       if (!mine) return reply(503);
     } else if (profile) {
-      await env.DB.prepare("UPDATE friend_profiles SET name = ?2, cls = ?3, race = ?4, level = ?5, score = ?6, updated = ?7 WHERE player = ?1")
-        .bind(me, profile.name, profile.cls, profile.race, profile.level, profile.score, day).run();
+      // (an old app sends no party account id: keep the one already stored)
+      await env.DB.prepare("UPDATE friend_profiles SET name = ?2, cls = ?3, race = ?4, level = ?5, score = ?6, updated = ?7, pid = CASE WHEN ?8 != '' THEN ?8 ELSE pid END WHERE player = ?1")
+        .bind(me, profile.name, profile.cls, profile.race, profile.level, profile.score, day, profile.pid).run();
     }
     return json(200, { code: mine.code, friends: await friendList(env, me) });
   }

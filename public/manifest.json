@@ -1,13 +1,13 @@
 {
   "schema": 1,
-  "latest": "2026.11.28-1",
-  "url": "data/game-data-2026.11.28-1.json",
-  "sha256": "4514af236da46495426f624e13c3cd05e1c279894412bd8aba96c8c47039a024",
-  "bytes": 155750,
+  "latest": "2026.11.28-2",
+  "url": "data/game-data-2026.11.28-2.json",
+  "sha256": "d1159455e46c9dd21de713ca2c4da7b8e77f11ca1ad2377d27185ba166f1df23",
+  "bytes": 155850,
   "revoked": ["2026.10.20-2"],
   "signature": {
     "kid": "k1",
     "alg": "RS256",
-    "value": "WL5h75fJrq/iVkm3/Zvy5Clfm9CxsY+78ZR6MaJNp9RhzskJBYoilQPTdWxUQuoIobkcPzCFWJt04VWaJaq4hs08iNcizb5OYByXmBBamWRzxrnDajdZ8bIu4LfzXZJ3IrzPoEPFAjhnTJGk6nIfTxYjF5zckWVXGJB2spUMGOlkqgRcBOCOjNw4JGxXYwJf08bh1u3gMIfEdxzo55xW5nc4q8DpgEqTOIisOP025vu6FO6uQDXtT4f3xpHijPCYHmQSXWUvzzCOKGksmGVvLbJNKcdEzCSRnpWTaLB+sufChnB2ogMiMiegk7BTiiD/rdH/ATyl/BDnESL37bqSJzNHCPuSMn/ZHoRC95vngjyAik3SLXcX+QqrikvS2UH4amcXcuRCrEMYFELcrwT5atltWxVTRMudAT5dTgnkaJXIMOij1jBef0Vkn9kFK73Jw0DJK39q36lCtmjbX0bv9iq3FRLrgXrWCskK8iglblQpjmQ/na4YWDABwaJzs5zN"
+    "value": "0XbcleUaji8n5v7YUbPQKTn4savpsI9IsK4PFxyPGUVTgAF5/x1arg2Emlcjg3TOK0Vm5l7QvbrZhLkXwB5C6ERxcjYqxa7Pqw8oM5qjh3siDDVEUREg2XmP0iA5DIwLN+bxrqrXxCLiledRmcopWlVxkwiJVpPWL0AqQpcV+F21xsFJlVkoAnUF6dTETc5IOWUObd+Tp4vYww1iJyEiaoAtU/ZrjT23eIU8f3t8BpZu+5onUvoXg0QBJ431YbvE3lB/do0O+SDqLh6ZcABdoWe5RufOoFn4Q5zj9NCIfz5oMXksN7W5pFOO1xMkjyBPhM9Jcu/woeTHaTNtjarCgTJqB3twSr+87bTnr9FpY9C9uyWwK2d3DVH7JVkP0ZPG+0VmdIcT/8aVU4muiGa5ikDX9iqwqpKkZd/G5/B6yacPC6kJOr0yDbsN1KNx8W4hs3ofigE4c9KPtQE6DeubrM70qUQH3dL+UjH0MH1ufVSBHXvzPLZYudlSY99dvVgu"
   }
 }
